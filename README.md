@@ -16,8 +16,8 @@ All the configuratoin, binaries and dot files for a "clean" system
 | Ctrl+A, o                                 | Toggle last window                              |
 | Ctrl+A, [0-9]                             | Select window                                   |
 | Ctrl+A, Esc                               | Enter select mode                               |
-  * vim keys, navigation keys               | To navigate                                     |
-  * v                                       | Start text selection                            |
-  * y                                       | Yank the text to tmux buffer                    |
+| ---> vim keys, navigation keys            | To navigate                                     |
+| ---> v                                    | Start text selection                            |
+| ---> y                                    | Yank the text to tmux buffer                    |
 | Ctrl+A, p                                 | Past text from tmux buffer                      |
 | Ctrl+A, y                                 | Copy text from tmux buffer to xclipboard        |
