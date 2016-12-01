@@ -1,0 +1,17 @@
+.cs
+12|10
+nunit test fixture
+using System;
+using NUnit.Framework;
+
+namespace {namespace}
+{
+    [TestFixture]
+    public class {itemname}
+    {
+        [Test]
+        public void Test()
+        {
+        }
+    }
+}

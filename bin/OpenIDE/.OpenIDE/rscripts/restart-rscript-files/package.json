@@ -1,0 +1,36 @@
+{
+    "#Comment": "# is used here to comment out optional fields",
+    "#Comment": "supported os options are linux, osx and windows",
+    "#Comment": "pre and post install actions accepts only OpenIDE non edior commands",
+    "os": ["linux"],
+    "target": "rscript",
+    "id": "restart-rscript",
+    "version": "v1.0",
+    "command": "restart-rscript",
+    "name": "Restart reactive script",
+    "description": "Lets you bind a shortcut key to restart the reactive script closest to the file you are editing.",
+    "#config-prefix": "restart-rscript.",
+    "#pre-install-actions": [],
+    "post-install-actions": [
+        {
+            "local": "command|conf contextual.command.any.any.restart.current.rscript=restart-rscript-from-caret",
+            "global": "command|conf contextual.command.any.any.restart.current.rscript=restart-rscript-from-caret -g"
+        },
+    ],
+    "#pre-uninstall-actions": [],
+    "post-uninstall-actions": [
+        {
+            "local": "command|conf contextual.command.any.any.restart.current.rscript=restart-rscript-from-caret -d",
+            "global": "command|conf contextual.command.any.any.restart.current.rscript=restart-rscript-from-caret  -d -g"
+        },
+    ],
+    "#dependencies": [
+        {
+            "id": "package id",
+            "versions":
+            [
+                "v1.0"
+            ]
+        }
+    ]
+}

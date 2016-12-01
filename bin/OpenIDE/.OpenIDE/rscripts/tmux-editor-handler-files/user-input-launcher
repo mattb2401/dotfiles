@@ -1,0 +1,11 @@
+#!/bin/bash
+
+DIR=$(cd $(dirname "$0"); pwd)
+ROOT=$(pwd)
+WINDOW=$(tmux display-message -p '#S')
+PANE=$(tmux display-message -p '#P')
+DEVNULL=$(tmux split-window -t $PANE -v -p 15)
+NEWPANE=$(tmux display-message -p '#P')
+NEWHEIGHT=$(tmux display-message -pt $PANE -F '#{pane_height}')
+DEVNULL=$(tmux resize-pane -t $NEWPANE -y 3)
+DEVNULL=$(tmux send-keys "$DIR/user-input $1 $2 $3  && tmux kill-pane -t $NEWPANE" C-m)

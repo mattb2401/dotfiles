@@ -1,0 +1,26 @@
+{
+    "#Comment": "# is used here to comment out optional fields",
+    "#Comment": "supported os options are linux, osx and windows",
+    "#Comment": "pre and post install actions accepts only OpenIDE non edior commands",
+    "os": ["linux"],
+    "target": "rscript",
+    "id": "evaluate-symfony-file",
+    "version": "v1.0",
+    "command": "evaluate-symfony-file",
+    "name": "evaluate-symfony-file",
+    "description": "evaluate-symfony-file rscript package",
+    "#config-prefix": "evaluate-symfony-file.",
+    "#pre-install-actions": [],
+    "#post-install-actions": [],
+    "#pre-uninstall-actions": [],
+    "#post-uninstall-actions": [],
+    "#dependencies": [
+        {
+            "id": "package id",
+            "versions":
+            [
+                "v1.0"
+            ]
+        }
+    ]
+}

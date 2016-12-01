@@ -1,0 +1,17 @@
+{
+	"#Comment": "# is used here to comment out optional fields",
+	"#Comment": "pre and post install actions accepts only OpenIDE non edior commands",
+	"os": ["linux","windows","osx"],
+	"target": "script",
+	"id": "init-sublime",
+	"version": "v1.0",
+	"command": "init",
+	"name": "Initialize sublime",
+	"description": "Custom init script that inits, creates a Sublime project and an optional profile",
+	"#config-prefix": "init.",
+	"#pre-install-actions": [],
+	"#post-install-actions": [],
+	"#dependencies": [
+			{"id": "name", "version": "v1.0"}
+		]
+}

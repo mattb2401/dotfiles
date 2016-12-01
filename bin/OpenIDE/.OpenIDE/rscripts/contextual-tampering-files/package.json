@@ -1,0 +1,23 @@
+{
+	"#Comment": "# is used here to comment out optional fields",
+	"#Comment": "supported os options are linux, osx and windows",
+	"#Comment": "pre and post install actions accepts only OpenIDE non edior commands",
+	"os": ["linux","windows","osx"],
+	"target": "rscript",
+	"id": "contextual-tampering",
+	"version": "v1.0",
+	"command": "contextual-tampering",
+	"name": "contextual-tampering",
+	"description": "A generic script for handling user selected actions for navigation and refactoring",
+	"config-prefix": "contextual-tampering.",
+	"#pre-install-actions": [],
+	"#dependencies": [
+		{
+			"id": "package id",
+			"versions":
+			[
+				"v1.0"
+			]
+		}
+	]
+}

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+while read -r line
+do
+    line=$(echo $line|sed s/\"/\'/g)
+    echo "$line"
+    oi codemodel output "$1" "$line" &
+done

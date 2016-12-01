@@ -1,0 +1,23 @@
+{
+	"#Comment": "# is used here to comment out optional fields",
+	"#Comment": "pre and post install actions accepts only OpenIDE non edior commands",
+	"os": ["linux","windows","osx"],
+	"target": "script",
+	"id": "sources",
+	"version": "v1.0",
+	"command": "sources",
+	"name": "Package Source Manager",
+	"description": "Creates and maintains .sources files for hosted package sources",
+	"#config-prefix": "sources.",
+	"#pre-install-actions": [],
+	"#post-install-actions": [],
+	"#dependencies": [
+			{
+				"id": "name",
+				"versions":
+				[
+					"v1.0"
+				]
+			}
+		]
+}

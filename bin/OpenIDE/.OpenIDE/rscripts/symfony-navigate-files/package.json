@@ -1,0 +1,67 @@
+{
+	"#Comment": "# is used here to comment out optional fields",
+	"#Comment": "supported os options are linux, osx and windows",
+	"#Comment": "pre and post install actions accepts only OpenIDE non edior commands",
+	"os": ["linux","osx"],
+	"target": "rscript",
+	"id": "symfony-navigate",
+	"version": "v1.0",
+	"command": "symfony-navigate",
+	"name": "Symfony navigate",
+	"description": "Adds navigation features to symfony",
+	"#config-prefix": "symfony-navigate.",
+	"#pre-install-actions": [],
+	"post-install-actions": [
+		{
+			"local": "command|conf contextual.navigate.php.php.go.to.nearest.configuration=php-go-to-nearest-configuration",
+			"global": "command|conf contextual.navigate.php.php.go.to.nearest.configuration=php-go-to-nearest-configuration -g"
+		},
+		{
+			"local": "command|conf contextual.navigate.php.php.go.to.nearest.routing=php-go-to-nearest-routing",
+			"global": "command|conf contextual.navigate.php.php.go.to.nearest.routing=php-go-to-nearest-routing -g"
+		},
+		{
+			"local": "command|conf contextual.navigate.php.php.go.to.nearest.service.definition=php-go-to-nearest-service-definition",
+			"global": "command|conf contextual.navigate.php.php.go.to.nearest.service.definition=php-go-to-nearest-service-definition -g"
+		},
+		{
+			"local": "command|conf contextual.navigate.php.php.go.to.service.definition=php-go-to-service-definition",
+			"global": "command|conf contextual.navigate.php.php.go.to.service.definition=php-go-to-service-definition -g"
+		}
+	],
+	"#pre-uninstall-actions": [],
+	"post-uninstall-actions": [
+		{
+			"local": "command|conf contextual.navigate.php.php.go.to.nearest.configuration=php-go-to-nearest-configuration -d",
+			"global": "command|conf contextual.navigate.php.php.go.to.nearest.configuration=php-go-to-nearest-configuration -g -d"
+		},
+		{
+			"local": "command|conf contextual.navigate.php.php.go.to.nearest.routing=php-go-to-nearest-routing -d",
+			"global": "command|conf contextual.navigate.php.php.go.to.nearest.routing=php-go-to-nearest-routing -g -d"
+		},
+		{
+			"local": "command|conf contextual.navigate.php.php.go.to.nearest.service.definition=php-go-to-nearest-service-definition -d",
+			"global": "command|conf contextual.navigate.php.php.go.to.nearest.service.definition=php-go-to-nearest-service-definition -g -d"
+		},
+		{
+			"local": "command|conf contextual.navigate.php.php.go.to.service.definition=php-go-to-service-definition -d",
+			"global": "command|conf contextual.navigate.php.php.go.to.service.definition=php-go-to-service-definition -g -d"
+		}
+	],
+	"dependencies": [
+			{
+				"id": "locate-files",
+				"versions":
+				[
+					"v1.0"
+				]
+			},
+			{
+				"id": "contextual-tampering",
+				"versions":
+				[
+					"v1.0"
+				]
+			}
+		]
+}

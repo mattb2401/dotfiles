@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DIR=$(cd $(dirname "$0"); pwd)
+ROOT=$(pwd)
+WINDOW=$(tmux display-message -p '#S')
+PANE=$(tmux display-message -p '#P')
+DEVNULL=$(tmux split-window -t $PANE -v -p 15)
+NEWPANE=$(tmux display-message -p '#P')
+DEVNULL=$(tmux send-keys "$DIR/file-search $ROOT && tmux kill-pane -t $NEWPANE" C-m)

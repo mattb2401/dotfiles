@@ -1,0 +1,26 @@
+{
+	"#Comment": "# is used here to comment out optional fields",
+	"#Comment": "supported os options are linux, osx and windows",
+	"#Comment": "pre and post install actions accepts only OpenIDE non edior commands",
+	"os": ["linux","osx"],
+	"target": "script",
+	"id": "melin-generate",
+	"version": "v1.0",
+	"command": "generate",
+	"name": "Melin generate",
+	"description": "Generates various type files for the melin cqrs structure",
+	"#config-prefix": "generate.",
+	"#pre-install-actions": [],
+	"#post-install-actions": [],
+	"#pre-uninstall-actions": [],
+	"#post-uninstall-actions": [],
+	"#dependencies": [
+			{
+				"id": "package id",
+				"versions":
+				[
+					"v1.0"
+				]
+			}
+		]
+}

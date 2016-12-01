@@ -1,0 +1,26 @@
+{
+    "#Comment": "# is used here to comment out optional fields",
+    "#Comment": "supported os options are linux, osx and windows",
+    "#Comment": "pre and post install actions accepts only OpenIDE non edior commands",
+    "os": ["linux"],
+    "target": "script",
+    "id": "ssh",
+    "version": "v1.0",
+    "command": "ssh",
+    "name": "ack-ssh",
+    "description": "My ssh connections and forwards",
+    "#config-prefix": "ssh.",
+    "#pre-install-actions": [],
+    "#post-install-actions": [],
+    "#pre-uninstall-actions": [],
+    "#post-uninstall-actions": [],
+    "#dependencies": [
+        {
+            "id": "package id",
+            "versions":
+            [
+                "v1.0"
+            ]
+        }
+    ]
+}

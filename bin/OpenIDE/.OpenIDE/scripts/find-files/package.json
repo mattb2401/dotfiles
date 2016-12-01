@@ -1,0 +1,23 @@
+{
+	"#Comment": "# is used here to comment out optional fields",
+	"#Comment": "pre and post install actions accepts only OpenIDE non edior commands",
+	"os": ["linux","osx"],
+	"target": "script",
+	"id": "find",
+	"version": "v1.0",
+	"command": "find",
+	"name": "File search",
+	"description": "Code search matching on file contents, path and type using the native find command",
+	"#config-prefix": "find.",
+	"#pre-install-actions": [],
+	"#post-install-actions": [],
+	"#dependencies": [
+			{
+				"id": "package id",
+				"versions":
+				[
+					"v1.0"
+				]
+			}
+		]
+}

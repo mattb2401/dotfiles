@@ -1,0 +1,164 @@
+#!/usr/bin/env python
+import os, sys, curses, curses.textpad, subprocess, pprint
+
+def set_shorter_esc_delay_in_os():
+    try:
+        os.environ['ESCDELAY']
+    except KeyError:
+        os.environ['ESCDELAY'] = '25'
+    return
+
+set_shorter_esc_delay_in_os()
+
+screen = curses.initscr()
+curses.noecho()
+screen.keypad(1)
+height,width = screen.getmaxyx()
+
+matches = []
+termMatches = []
+selected = -1
+listStart = 3
+listHeight = height - listStart - 2
+windowPadding = 3
+markerPosition = windowPadding-2
+column_name_start = windowPadding
+list_width = width - (windowPadding*2)
+column_name_width = list_width
+
+def runProcess(exe):    
+    p = subprocess.Popen(exe, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    lines = []
+    while(True):
+        retcode = p.poll() # returns None while subprocess is running
+        line = p.stdout.readline().decode(encoding='windows-1252').strip('\n').strip('\r')
+        if line != "":
+            lines.append(line)
+        if(line == "" and retcode is not None):
+            break
+    return lines
+
+def clearSelection():
+    global selected
+    if selected != -1:
+        screen.addstr(selected+listStart, markerPosition, " ")
+        selected = -1
+
+def drawSelection(nr):
+    clearSelection()
+    global selected
+    screen.addstr(nr+listStart, markerPosition, "*")
+    selected = nr
+
+def search(screen, term):
+    global termMatches
+    global list_width
+    terms = term.lower().split(" ")
+    termMatches = []
+    for key,value in matches:
+        fullmatch = True
+        for t in terms:
+            if not t in value.lower():
+                fullmatch = False
+                break
+        if fullmatch:
+            termMatches.append((key,value))
+
+    n = listStart
+    for key,value in termMatches:
+        screen.addstr(n, column_name_start, value.ljust(column_name_width))
+        if n == listHeight+listStart:
+            n = n + 1
+            break;
+        n = n + 1
+    screen.clrtobot()
+    if len(termMatches) > 0:
+        drawSelection(0)
+    else:
+        clearSelection()
+    screen.refresh()
+
+def readSelections(filename):
+    global matches
+    with open(filename) as f:
+        for line in f.readlines():
+            if "||" in line:
+                chunks = line.strip("\n").split("||")
+                matches.append((chunks[0],chunks[1]))
+            else:
+                matches.append((line.strip("\n"),line.strip("\n")))
+    os.unlink(filename)
+
+if __name__ == "__main__":
+    path = sys.argv[1]
+    correlationId = sys.argv[2]
+    readSelections(sys.argv[3])
+    os.chdir(path) 
+    screen.addstr(listStart-1, column_name_start, "Name".ljust(column_name_width))
+    response = None
+    word = ""
+    pos = 0
+    gotoStatement = None
+    search(screen, "")
+    screen.move(0, windowPadding)
+    while 1:
+        c = screen.getch()
+        if c == 27:
+            break
+        # backspace
+        elif c == curses.KEY_BACKSPACE:
+            if pos > 0:
+                word = word[0:pos-1]+word[pos:]
+                pos = pos -1
+        elif c == curses.KEY_LEFT:
+            if pos > 0:
+                pos = pos -1
+            screen.move(0, pos+windowPadding)
+            continue
+        elif c == curses.KEY_RIGHT:
+            if pos < len(word):
+                pos = pos +1
+            screen.move(0, pos+windowPadding)
+            continue
+        elif c == curses.KEY_HOME:
+            screen.move(0, windowPadding)
+            pos = 0
+            continue
+        elif c == curses.KEY_END:
+            screen.move(0, windowPadding+len(word))
+            pos = len(word)
+            continue
+        elif c == curses.KEY_DOWN:
+            if selected == len(termMatches)-1:
+                continue
+            drawSelection(selected+1)
+            screen.move(0, pos+windowPadding) 
+            continue
+        elif c == curses.KEY_UP:
+            if selected == 0:
+                continue
+            drawSelection(selected-1)
+            screen.move(0, pos+windowPadding) 
+            continue
+        elif c == ord("\t"):
+            search(screen, word)
+            screen.move(0, pos+windowPadding) 
+            continue
+        elif c == ord("\n"):
+            if len(termMatches) > 0:
+                key,value = termMatches[selected]
+                response = "'user-selected' '"+correlationId+"' '"+key+"'"
+                break
+            continue
+        else:
+            word = word[0:pos]+chr(c)+word[pos:]
+            pos = pos + 1
+        screen.addstr(0, windowPadding, word.ljust(list_width))
+        search(screen, word)
+        screen.move(0, pos+windowPadding) 
+    curses.endwin()
+    if response == None:
+        response = "\"'user-selected' '"+correlationId+"' 'user-cancelled'\""
+    for line in runProcess(['oi', 'codemodel', 'publish', response]):
+        pass
+

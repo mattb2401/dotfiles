@@ -1,0 +1,36 @@
+{
+    "#Comment": "# is used here to comment out optional fields",
+    "#Comment": "supported os options are linux, osx and windows",
+    "#Comment": "pre and post install actions accepts only OpenIDE non edior commands",
+    "os": ["linux"],
+    "target": "rscript",
+    "id": "spec-extractor",
+    "version": "v1.0",
+    "command": "spec-extractor",
+    "name": "spec-extractor",
+    "description": "spec-extractor rscript package",
+    "#config-prefix": "spec-extractor.",
+    "#pre-install-actions": [],
+    "#post-install-actions": [
+        {
+            "local": "command|conf contextual.navigate.php.php.extract.spesifications=extract-specifications-current-file",
+            "global": "command|conf contextual.navigate.php.php.extract.spesifications=extract-specifications-current-file -g"
+        }
+    ],
+    "#pre-uninstall-actions": [],
+    "#post-uninstall-actions": [
+        {
+            "local": "command|conf contextual.navigate.php.php.extract.spesifications=extract-specifications-current-file -d",
+            "global": "command|conf contextual.navigate.php.php.extract.spesifications=extract-specifications-current-file -g -d"
+        }
+    ],
+    "#dependencies": [
+        {
+            "id": "package id",
+            "versions":
+            [
+                "v1.0"
+            ]
+        }
+    ]
+}

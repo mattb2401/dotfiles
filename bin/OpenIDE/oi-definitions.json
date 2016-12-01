@@ -1,0 +1,2156 @@
+{
+  "commands": [
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "[LANGUAGES]",
+          "description": "Enabled languages for this config point using the first language as default language (C#,python)",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [],
+          "cmd": "[all]",
+          "description": "Initialize with all languages",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        }
+      ],
+      "cmd": "init",
+      "description": "Initializes and sets up a configuration point for OpenIDE",
+      "type": "builtin",
+      "location": null,
+      "updated": "2016.11.23 14:40:49"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "paths",
+              "description": "Lists valid profile paths in prioritized order",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "list",
+          "description": "Lists profiles information raw",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "[--global]",
+                  "description": "Activating global profile (setting profile globally does not override local profile)",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                },
+                {
+                  "arguments": [],
+                  "cmd": "[-g]",
+                  "description": "Short version of --global",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "NAME",
+              "description": "Profile name",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "load",
+          "description": "Loads a profile",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "[--global]",
+                  "description": "Creates application global profile",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                },
+                {
+                  "arguments": [],
+                  "cmd": "[-g]",
+                  "description": "Short version of --global",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "NAME",
+              "description": "Profile name",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "init",
+          "description": "Initializes a new profile",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "[--global]",
+                  "description": "Clones from active global profile",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                },
+                {
+                  "arguments": [],
+                  "cmd": "[-g]",
+                  "description": "Short version of --global",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "NAME",
+              "description": "Name of new cloned profile",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "clone",
+          "description": "Clones active profile",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "[--global]",
+                  "description": "Removes the globally defined profile",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                },
+                {
+                  "arguments": [],
+                  "cmd": "[-g]",
+                  "description": "Short version of --global",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "NAME",
+              "description": "Profile name",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "rm",
+          "description": "Removes profile",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        }
+      ],
+      "cmd": "profile",
+      "description": "Creates, lists, activates and removes profiles. A profile contains scripts and configuration",
+      "type": "builtin",
+      "location": null,
+      "updated": "2016.11.23 14:40:49"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "list",
+          "description": "List available configuration options (*.oicfgoptions)",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [],
+          "cmd": "init",
+          "description": "Initializes a configuration point",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "cfgfile",
+              "description": "Location of nearest configuration file",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [],
+              "cmd": "cfgpoint",
+              "description": "Location of nearest configuration point",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [],
+              "cmd": "rootpoint",
+              "description": "Location of current root location",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [],
+              "cmd": "SETTING_NAME",
+              "description": "Setting to print the value of. Supports wildcard (global fallback)",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [],
+              "cmd": "[--global]",
+              "description": "Forces configuration command to be directed towards global config",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [],
+              "cmd": "[-g]",
+              "description": "Short version of --global",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "read",
+          "description": "Prints closest configuration or global if specified",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "[--global]",
+              "description": "Forces configuration command to be directed towards global config",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [],
+              "cmd": "[-g]",
+              "description": "Short version of --global",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [],
+              "cmd": "[--delete]",
+              "description": "Removes configuration setting",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [],
+              "cmd": "[-d]",
+              "description": "Short version of --delete",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "SETTING",
+          "description": "The statement to write to the config",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        }
+      ],
+      "cmd": "conf",
+      "description": "Writes a configuration setting in the current path (prints config if no arguments are specified)",
+      "type": "builtin",
+      "location": null,
+      "updated": "2016.11.23 14:40:49"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "PLUGIN_NAME",
+          "description": "The name of the plugin to launch",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "FILE|LINE|COLUMN|WINDOW",
+              "description": "| separated filepath, line and column",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "goto",
+          "description": "Open file on spesific line and column",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [],
+          "cmd": "setfocus",
+          "description": "Sets focus to the editor",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "TARGET_LOCATION",
+                  "description": "The target file and position to insert the text to. Format: /my/file.cs|LINE|COLUMN",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "CONTENT_FILE",
+              "description": "File containing the text you want to insert",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "insert",
+          "description": "Inserts a chunk of text to a spesific position in a file",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "END_POSITION",
+                  "description": "The position where the text chunk to remove ends. Format: LINE|COLUMN",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "FILE_AND_START_POSITION",
+              "description": "The file and starting position of text to be removed. Format: /my/file.cs|LINE|COLUMN",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "remove",
+          "description": "Removes a chunk of text from a file",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [],
+                      "cmd": "END_POSITION",
+                      "description": "The position where the text chunk to be replaced ends. Format: LINE|COLUMN",
+                      "type": "builtin",
+                      "location": null,
+                      "updated": "2016.11.23 14:40:49"
+                    }
+                  ],
+                  "cmd": "FILE_AND_START_POSITION",
+                  "description": "The file and starting position for text to be replaced. Format: /my/file.cs|LINE|COLUMN",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "CONTENT_FILE",
+              "description": "File containing the text you want to replace with",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "replace",
+          "description": "Replaces a chunk of text within a file",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "CONTENT_FILE",
+              "description": "A file containing insert, remove and replace commands. One command pr line",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "refactor",
+          "description": "Gives the posibility to batch up several insert, remove and replace commands",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "[FILE]",
+              "description": "If passed it will only respond with the file specified",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "get-dirty-files",
+          "description": "Queries the editor for all modified files and their content",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [],
+          "cmd": "command",
+          "description": "Custom editor commands",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [],
+          "cmd": "get-caret",
+          "description": "Gets the caret from editor",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "LIST",
+                  "description": "A comma separated list of options for the user",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "ID",
+              "description": "Identifier string to look for in the responding user-selected event",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "user-select",
+          "description": "Presents the user with a list of options to select from",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "[DEFAULT]",
+                  "description": "The default value for the user",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "ID",
+              "description": "Identifier string to look for in the responding user-inputted event",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "user-input",
+          "description": "Presents the user with an input dialog",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [],
+          "cmd": "get-windows",
+          "description": "Gets available windows in editor",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        }
+      ],
+      "cmd": "editor",
+      "description": "Initializes the environment by staring the editor, code model and editor engine",
+      "type": "builtin",
+      "location": null,
+      "updated": "2016.11.23 14:40:49"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "FILE",
+          "description": "Path to the file you want to create",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        }
+      ],
+      "cmd": "touch",
+      "description": "Creates a new file together with required directories and opens it in the editor",
+      "type": "builtin",
+      "location": null,
+      "updated": "2016.11.23 14:40:49"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "[-l]",
+          "description": "Print script details when listing scripts",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [],
+          "cmd": "[-n]",
+          "description": "Will print only script names (overrides -l)",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [],
+                      "cmd": "[-g]",
+                      "description": "Short for --global",
+                      "type": "builtin",
+                      "location": null,
+                      "updated": "2016.11.23 14:40:49"
+                    }
+                  ],
+                  "cmd": "[--global]",
+                  "description": "Will create the new script in the main script folder",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "SCRIPT-NAME",
+              "description": "Script name with optional file extension.",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "new",
+          "description": "Creates a new script",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "SCRIPT-NAME",
+              "description": "Script name. Local are picked over global",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "edit",
+          "description": "Opens a script for edit",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "SCRIPT-NAME",
+              "description": "Script name local are picked over global",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "rm",
+          "description": "Delete a script",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "SCRIPT-NAME",
+              "description": "Script name with optional file extension.",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "cat",
+          "description": "Prints the script to the terminal",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "PARAMS",
+                  "description": "Either script arguments or full command like: oi help mycommand",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "SCRIPT-NAME",
+              "description": "Script name",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "repl",
+          "description": "Continuously tests the specified script when saved",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        }
+      ],
+      "cmd": "script",
+      "description": "No arguments will list available scripts.",
+      "type": "builtin",
+      "location": null,
+      "updated": "2016.11.23 14:40:49"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "[-s]",
+          "description": "Lists scripts also showing state",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [],
+                      "cmd": "[-g]",
+                      "description": "Short for --global",
+                      "type": "builtin",
+                      "location": null,
+                      "updated": "2016.11.23 14:40:49"
+                    }
+                  ],
+                  "cmd": "[--global]",
+                  "description": "Will create the new script in the main script folder",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "SCRIPT-NAME",
+              "description": "Script name with optional file extension.",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "new",
+          "description": "Creates a script that is triggered by it's specified events",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "SCRIPT-NAME",
+              "description": "Reactive script name. Local are picked over global",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "edit",
+          "description": "Opens an existing reactive script for editor",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "SCRIPT-NAME",
+              "description": "Reactive script name. Local are picked over global",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "rm",
+          "description": "Deletes a reactive script",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "SCRIPT-NAME",
+              "description": "Reactive script name. Local are picked over global",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "pause",
+          "description": "Pauses an avtive reactive script",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "SCRIPT-NAME",
+              "description": "Reactive script name. Local are picked over global",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "resume",
+          "description": "Resumes a paused reactive script",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "SCRIPT-NAME",
+              "description": "Reactive script name. Local are picked over global",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "restart",
+          "description": "Restarts a reactive script running as a service",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "EVENT",
+                  "description": "Event to test the script with",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "SCRIPT-NAME",
+              "description": "Reactive script name. Local are picked over global",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "repl",
+          "description": "Continuously tests the specified script",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        }
+      ],
+      "cmd": "rscript",
+      "description": "Handles reactive scripts. No arguments will list available scripts",
+      "type": "builtin",
+      "location": null,
+      "updated": "2016.11.23 14:40:49"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [
+                        {
+                          "arguments": [],
+                          "cmd": "[-g]",
+                          "description": "Short for --global",
+                          "type": "builtin",
+                          "location": null,
+                          "updated": "2016.11.23 14:40:49"
+                        }
+                      ],
+                      "cmd": "[--global]",
+                      "description": "Will create the new snippet in the main language folder",
+                      "type": "builtin",
+                      "location": null,
+                      "updated": "2016.11.23 14:40:49"
+                    }
+                  ],
+                  "cmd": "SNIPPET_NAME",
+                  "description": "Desired name of snippet",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "LANGUAGE",
+              "description": "Language to create snippet for (name or file extnsion)",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "new",
+          "description": "Creates a new snippet for a given language",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "SNIPPET_NAME",
+                  "description": "Name coresponding to the snippet name in languages/[LANGUAGE]/snippets",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "LANGUAGE",
+              "description": "Language snippet belongs to (name or file extension)",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "edit",
+          "description": "Opens a snippet for edit",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "SNIPPET_NAME",
+                  "description": "Name coresponding to the snippet name in languages/[LANGUAGE]/snippets",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "LANGUAGE",
+              "description": "Language snippet belongs to (name or file extension)",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "rm",
+          "description": "Deletes a snippet",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [
+                        {
+                          "arguments": [],
+                          "cmd": "[INDENTATION]",
+                          "description": "Indentation snippet lines t=tab s=space. Eks: ttss",
+                          "type": "builtin",
+                          "location": null,
+                          "updated": "2016.11.23 14:40:49"
+                        }
+                      ],
+                      "cmd": "INSERT_TARGET",
+                      "description": "Where to insert the completed snippet FILE|LINE|COLUMN",
+                      "type": "builtin",
+                      "location": null,
+                      "updated": "2016.11.23 14:40:49"
+                    }
+                  ],
+                  "cmd": "SNIPPET_NAME",
+                  "description": "Name coresponding to the snippet name in languages/[LANGUAGE]/snippets",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "LANGUAGE",
+              "description": "Language snippet belongs to (name or file extension)",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "complete",
+          "description": "Displays the snippet preview form for completing a code snippet",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        }
+      ],
+      "cmd": "snippet",
+      "description": "Manages code snippets",
+      "type": "builtin",
+      "location": null,
+      "updated": "2016.11.23 14:40:49"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "available",
+          "description": "List available language plugins",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "LANGUAGE_NAME",
+              "description": "Language to list scripts for",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [
+                        {
+                          "arguments": [],
+                          "cmd": "[-l]",
+                          "description": "Adds the script to your local profile",
+                          "type": "builtin",
+                          "location": null,
+                          "updated": "2016.11.23 14:40:49"
+                        }
+                      ],
+                      "cmd": "SCRIPT_NAME",
+                      "description": "Script name with file extension.",
+                      "type": "builtin",
+                      "location": null,
+                      "updated": "2016.11.23 14:40:49"
+                    }
+                  ],
+                  "cmd": "LANGUAGE_NAME",
+                  "description": "Language containing script",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "new",
+              "description": "Create new script",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [],
+                      "cmd": "SCRIPT_NAME",
+                      "description": "Script name",
+                      "type": "builtin",
+                      "location": null,
+                      "updated": "2016.11.23 14:40:49"
+                    }
+                  ],
+                  "cmd": "LANGUAGE_NAME",
+                  "description": "Language containing script",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "edit",
+              "description": "Open script in the editor",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [],
+                      "cmd": "SCRIPT_NAME",
+                      "description": "Script name",
+                      "type": "builtin",
+                      "location": null,
+                      "updated": "2016.11.23 14:40:49"
+                    }
+                  ],
+                  "cmd": "LANGUAGE_NAME",
+                  "description": "Language containing script",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "cat",
+              "description": "Print script to the terminal",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [],
+                      "cmd": "SCRIPT_NAME",
+                      "description": "Script name",
+                      "type": "builtin",
+                      "location": null,
+                      "updated": "2016.11.23 14:40:49"
+                    }
+                  ],
+                  "cmd": "LANGUAGE_NAME",
+                  "description": "Language containing script",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "rm",
+              "description": "Delete script",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "script",
+          "description": "List all language scripts",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "LANGUAGE_NAME",
+              "description": "Language to list reactive scripts for",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [
+                        {
+                          "arguments": [],
+                          "cmd": "[-l]",
+                          "description": "Adds the script to your local profile",
+                          "type": "builtin",
+                          "location": null,
+                          "updated": "2016.11.23 14:40:49"
+                        }
+                      ],
+                      "cmd": "SCRIPT_NAME",
+                      "description": "Reactive script name with file extension",
+                      "type": "builtin",
+                      "location": null,
+                      "updated": "2016.11.23 14:40:49"
+                    }
+                  ],
+                  "cmd": "LANGUAGE_NAME",
+                  "description": "Language containing reactive script",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "new",
+              "description": "Create new reactive script",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [],
+                      "cmd": "SCRIPT_NAME",
+                      "description": "Reactive script name",
+                      "type": "builtin",
+                      "location": null,
+                      "updated": "2016.11.23 14:40:49"
+                    }
+                  ],
+                  "cmd": "LANGUAGE_NAME",
+                  "description": "Language containing reactive script",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "edit",
+              "description": "Open reactive script in the editor",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [],
+                      "cmd": "SCRIPT_NAME",
+                      "description": "Reactive script name",
+                      "type": "builtin",
+                      "location": null,
+                      "updated": "2016.11.23 14:40:49"
+                    }
+                  ],
+                  "cmd": "LANGUAGE_NAME",
+                  "description": "Language containing reactive script",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "cat",
+              "description": "Print reactive script to the terminal",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [],
+                      "cmd": "SCRIPT_NAME",
+                      "description": "Reactive script name",
+                      "type": "builtin",
+                      "location": null,
+                      "updated": "2016.11.23 14:40:49"
+                    }
+                  ],
+                  "cmd": "LANGUAGE_NAME",
+                  "description": "Language containing reactive script",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "rm",
+              "description": "Delete reactive script",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "rscript",
+          "description": "List all language reactive scripts",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        }
+      ],
+      "cmd": "language",
+      "description": "Administer laungage plugins",
+      "type": "builtin",
+      "location": null,
+      "updated": "2016.11.23 14:40:49"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "[SEARCH-STRING]",
+              "description": "When passed it will perform the search in the command line",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "gototype",
+          "description": "Launches the code engines type search window",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [],
+          "cmd": "explore",
+          "description": "Launches the code engines file explorer window",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "[QUERY]",
+              "description": "Format: file=MyProj*. Supported properties: file",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "get-projects",
+          "description": "Queries for projects",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "[QUERY]",
+              "description": "Format: file=*.cs. Supported properties: project,file",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "get-files",
+          "description": "Queries for files",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "[QUERY]",
+              "description": "Format: type=class,name=MyCls*. Supported properties: language, type, file, parent, name, signature, custom",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "get-signatures",
+          "description": "Queries for signatures",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "[QUERY]",
+              "description": "Format: file=*.cs,signature=My.Signature. Supported properties: file,signature",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "get-signature-refs",
+          "description": "Queries for signature references",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "[LIMIT]",
+                  "description": "Maximum records to return",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "[QUERY]",
+              "description": "Search string",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "find-types",
+          "description": "Type search",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "FILE|LINE|COLUMN",
+              "description": "Position for where to fetch signature",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "member-lookup",
+          "description": "Launches the member lookup window",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "FILE|LINE|COLUMN",
+              "description": "Position for where to fetch signature",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "goto-definition",
+          "description": "Goes to the signature definition of the reference at specified position",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "MESSAGE",
+              "description": "Message to pass on to the endpoint",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "publish",
+          "description": "Publishes command or event to the code engine endpoint",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "MESSAGE",
+                  "description": "Message to pass on to the endpoint",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "PUBLISHER",
+              "description": "Name of publisher",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "output",
+          "description": "Writes a message to the output endpoint",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "HINT",
+              "description": "Token path hint file/directory",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "get-token-path",
+          "description": "Queries for token path",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "HINT",
+              "description": "Token path hint file/directory",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "get-token-endpoint",
+          "description": "Queries for token endpoint",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "HINT",
+              "description": "Token path hint file/directory",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "get-token-event-endpoint",
+          "description": "Queries for token event endpoint",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "HINT",
+              "description": "Token path hint file/directory",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "get-token-output-endpoint",
+          "description": "Queries for token output endpoint",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "HINT",
+              "description": "Token path hint file/directory",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "get-token-editor-endpoint",
+          "description": "Queries for token editor endpoint",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        }
+      ],
+      "cmd": "codemodel",
+      "description": "Handles queries against the code model cache",
+      "type": "builtin",
+      "location": null,
+      "updated": "2016.11.23 14:40:49"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [],
+                      "cmd": "[--process-hidden]",
+                      "description": "Starts the process in the background",
+                      "type": "builtin",
+                      "location": null,
+                      "updated": "2016.11.23 14:40:49"
+                    }
+                  ],
+                  "cmd": "Arguments",
+                  "description": "Command line arguments",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "FILE",
+              "description": "Path to the file you want started",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "start",
+          "description": "Starts a process",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "HWND",
+                  "description": "Window handle of the window you want set to the foreground",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                },
+                {
+                  "arguments": [
+                    {
+                      "arguments": [],
+                      "cmd": "[WINDOW_TITLE]",
+                      "description": "Text that is contained in the window title you want shown",
+                      "type": "builtin",
+                      "location": null,
+                      "updated": "2016.11.23 14:40:49"
+                    }
+                  ],
+                  "cmd": "PROCESS_NAME",
+                  "description": "The name of the process that contains the window",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "window",
+              "description": "Bring a spesific window to foreground",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "PID",
+                  "description": "Process id",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "process",
+              "description": "Bring a spesific process's main window to foreground",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "set-to-foreground",
+          "description": "Sets the chosen window to foreground window (MS Windows)",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        }
+      ],
+      "cmd": "process",
+      "description": "Process handling",
+      "type": "builtin",
+      "location": null,
+      "updated": "2016.11.23 14:40:49"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "[FILTER]",
+          "description": "Supports *something*",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        }
+      ],
+      "cmd": "event-listener",
+      "description": "Hooks into OpenIDE and streams event messages to the console",
+      "type": "builtin",
+      "location": null,
+      "updated": "2016.11.23 14:40:49"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "PUBLISHER",
+          "description": "Name of the publisher to listen for",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [],
+          "cmd": "[-f]",
+          "description": "Keep listening even if the environment shuts down",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [],
+          "cmd": "[--all]",
+          "description": "Watch all active environments",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        }
+      ],
+      "cmd": "output-listener",
+      "description": "Listens to and prints output from the environment",
+      "type": "builtin",
+      "location": null,
+      "updated": "2016.11.23 14:40:49"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "[-n]",
+          "description": "Only print package id",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "NAME",
+              "description": "Name of the script/rscript to create package for",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "init",
+          "description": "Initialize package for script or rscript",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "NAME",
+              "description": "The name of the metapackage you want to create",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "new-metapackage",
+          "description": "Creates a metapackage file",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "SOURCE",
+              "description": "Ex. .OpenIDE/scripts/myscript, name or package.json",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "read",
+          "description": "reads package contents",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "[DESTINATION]",
+                  "description": "Destination directory (default destination from config)",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "SOURCE",
+              "description": "Ex. .OpenIDE/scripts/myscript",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "build",
+          "description": "Builds package",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "[-g]",
+                  "description": "Installs to global profiles",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "SOURCE",
+              "description": "Path to local file, URL or name",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "install",
+          "description": "Installs package",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "[-g]",
+                  "description": "Updates package in global profiles",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "SOURCE",
+              "description": "Path to local file, URL or name",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "update",
+          "description": "Updates package",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "SOURCE",
+              "description": "Ex. .OpenIDE/scripts/myscript or name",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "uninstall",
+          "description": "Uninstalls package",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "NAME",
+              "description": "Package name",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "edit",
+          "description": "Opens package file in text editor",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "[TEST-FILE]",
+              "description": "Specify test file to run tests for",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [],
+              "cmd": "-v",
+              "description": "Verbose mode prints running tests",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [],
+              "cmd": "-o",
+              "description": "Prints outputs for failing tests",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [],
+              "cmd": "-e",
+              "description": "Prints events for failing tests",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [],
+              "cmd": "-l",
+              "description": "Logging",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [],
+              "cmd": "--only-errors",
+              "description": "Prints only failuers and inconclusives",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "test",
+          "description": "Runs tests for all or parts of the system",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [
+                        {
+                          "arguments": [],
+                          "cmd": "[-g]",
+                          "description": "Adds source to global profile",
+                          "type": "builtin",
+                          "location": null,
+                          "updated": "2016.11.23 14:40:49"
+                        }
+                      ],
+                      "cmd": "LOCATION",
+                      "description": "File reference/URL",
+                      "type": "builtin",
+                      "location": null,
+                      "updated": "2016.11.23 14:40:49"
+                    }
+                  ],
+                  "cmd": "NAME",
+                  "description": "Name of new source",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "add",
+              "description": "Add source",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "NAME",
+                  "description": "Name of source to remove",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "rm",
+              "description": "Remove source",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "[NAME]",
+                  "description": "Source name. If not specified it updates all",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "update",
+              "description": "Updates existing source list.",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "[NAME]",
+                  "description": "Source to list packages for",
+                  "type": "builtin",
+                  "location": null,
+                  "updated": "2016.11.23 14:40:49"
+                }
+              ],
+              "cmd": "list",
+              "description": "Lists available packages from sources",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "src",
+          "description": "Lists, adds and removes package sources",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        }
+      ],
+      "cmd": "package",
+      "description": "Package management - no arguments lists installed packages",
+      "type": "builtin",
+      "location": null,
+      "updated": "2016.11.23 14:40:49"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "[TOKEN]",
+              "description": "The environment token path",
+              "type": "builtin",
+              "location": null,
+              "updated": "2016.11.23 14:40:49"
+            }
+          ],
+          "cmd": "details",
+          "description": "Displays details about a running environment",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        },
+        {
+          "arguments": [],
+          "cmd": "start",
+          "description": "Starts OpenIDE for the current path (no editor engine)",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        }
+      ],
+      "cmd": "environment",
+      "description": "Lists and manages OpenIDE evironments",
+      "type": "builtin",
+      "location": null,
+      "updated": "2016.11.23 14:40:49"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "[KEY]",
+          "description": "Key path of environment to shut down",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        }
+      ],
+      "cmd": "shutdown",
+      "description": "Shuts down current environment but leaves editor",
+      "type": "builtin",
+      "location": null,
+      "updated": "2016.11.23 14:40:49"
+    },
+    {
+      "arguments": [],
+      "cmd": "get-commands",
+      "description": "Lists available commands for shell completion",
+      "type": "builtin",
+      "location": null,
+      "updated": "2016.11.23 14:40:49"
+    },
+    {
+      "arguments": [],
+      "cmd": "run",
+      "description": "Launches the command execution window",
+      "type": "builtin",
+      "location": null,
+      "updated": "2016.11.23 14:40:49"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "COMMAND",
+          "description": "Command name",
+          "type": "builtin",
+          "location": null,
+          "updated": "2016.11.23 14:40:49"
+        }
+      ],
+      "cmd": "help",
+      "description": "Displays usage info for specified command(s)",
+      "type": "builtin",
+      "location": null,
+      "updated": "2016.11.23 14:40:49"
+    }
+  ]
+}

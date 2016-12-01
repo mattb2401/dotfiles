@@ -1,0 +1,23 @@
+{
+	"#Comment": "# is used here to comment out optional fields",
+	"#Comment": "pre and post install actions accepts only OpenIDE non edior commands",
+	"os": ["linux","osx"],
+	"target": "script",
+	"id": "locate-files",
+	"version": "v1.0",
+	"command": "locate",
+	"name": "Locate files",
+	"description": "Finds files by name",
+	"#config-prefix": "locate.",
+	"#pre-install-actions": [],
+	"#post-install-actions": [],
+	"#dependencies": [
+			{
+				"id": "package id",
+				"versions":
+				[
+					"v1.0"
+				]
+			}
+		]
+}

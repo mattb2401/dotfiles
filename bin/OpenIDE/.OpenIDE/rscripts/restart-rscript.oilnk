@@ -1,0 +1,11 @@
+{
+    "link": {
+        "#Comment": "The preparer can only be a relative path to -files dir",
+        "#preparer": "build.exe restart-rscript.exe restart-rscript.fsx",
+        
+        "executable": "restart-rscript-files/restart-rscript.exe",
+        "params": "{event} {global-profile} {local-profile}",
+        "#Comment": "Valid: {event} {global-profile} {local-profile}",
+        "#Comment": "Paths uses / on all platforms"
+    }
+}

@@ -1,0 +1,11 @@
+{name},{event}
+2|2
+public function test{name}()
+{
+    $cmd = $this->getCommand();
+    $cmd->isValid();
+    $this->handle($cmd);
+
+    $event = $this->events[0];
+    $this->eventIs($event, '{event}');
+}

@@ -1,0 +1,19 @@
+{
+    "#Comment": "Handlers are command arguments and stdout writelines",
+    "handlers": [ {
+            "handler": {
+                "arguments": [ "reactive-script-reacts-to" ],
+                "responses": [ "goto*.cs|*" ]
+            }
+        }
+    ],
+    "link": {
+        "#Comment": "The preparer can only be a relative path to -files dir",
+        "#preparer": "For instance a compiler. Only run on get-command-definitions",
+        
+        "executable": "path/to/my/application",
+        "params": "{event} {global-profile} {local-profile}",
+        "#Comment": "Valid: {event} {global-profile} {local-profile}",
+        "#Comment": "Paths uses / on all platforms"
+    }
+}

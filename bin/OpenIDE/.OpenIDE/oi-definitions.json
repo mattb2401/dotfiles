@@ -1,0 +1,1485 @@
+{
+  "commands": [
+    {
+      "arguments": [
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "[--recursive]",
+                  "description": "Will search folders recursively for file pattern.",
+                  "type": "language",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+                  "updated": "2016.11.26 22:57:29"
+                },
+                {
+                  "arguments": [],
+                  "cmd": "[-r]",
+                  "description": "Short version for --recursive",
+                  "type": "language",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "FILE_TO_ADD",
+              "description": "Relative or full path to the file to add. Supports *",
+              "type": "language",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "addfile",
+          "description": "Adds a file to the closest project",
+          "type": "language",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "FILE_TO_DELETE",
+              "description": "Relative or full path to the file to delete",
+              "type": "language",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "deletefile",
+          "description": "Removes a file from the closest project and deletes it",
+          "type": "language",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "[PROJECT]",
+                  "description": "The path to the project to add the reference to",
+                  "type": "language",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "REFERENCE",
+              "description": "The path to the project or assembly to be referenced",
+              "type": "language",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "reference",
+          "description": "Adds a reference to a project file",
+          "type": "language",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "[PROJECT]",
+                  "description": "Project to remove the reference from",
+                  "type": "language",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "REFERENCE",
+              "description": "Path to the reference to remove",
+              "type": "language",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "dereference",
+          "description": "Dereferences a project/assembly from given project",
+          "type": "language",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "FILE",
+                  "description": "Path to the file to be create",
+                  "type": "language",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "class",
+              "description": "Creates a new class",
+              "type": "language",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "FILE",
+                  "description": "Path to the file to be create",
+                  "type": "language",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "fixture",
+              "description": "Creates a new nunit test fixture",
+              "type": "language",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "FILE",
+                  "description": "Path to the file to be create",
+                  "type": "language",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "interface",
+              "description": "Creates a new interface",
+              "type": "language",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "new",
+          "description": "Uses the new template to create what ever specified by the template",
+          "type": "language",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "FILE_TO_REMOVE",
+              "description": "Relative or full path to the file to remove",
+              "type": "language",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "removefile",
+          "description": "Removes a file from the closest project",
+          "type": "language",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "POSITION",
+              "description": "File position as FILE|LINE|COLUMN",
+              "type": "language",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "signature-from-position",
+          "description": "Retrieves enclosing signature from position",
+          "type": "language",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "POSITION",
+              "description": "File position as FILE|LINE|COLUMN",
+              "type": "language",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "go-to-definition",
+          "description": "Moves to where the signature under the cursor is defined",
+          "type": "language",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "POSITION",
+              "description": "File position as FILE|LINE|COLUMN",
+              "type": "language",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "go-to-definition",
+          "description": "Moves to where the signature under the cursor is defined",
+          "type": "language",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [],
+          "cmd": "get-word",
+          "description": "Returns word under cursor",
+          "type": "language",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "FILE",
+              "description": "Path to get namespace for",
+              "type": "language",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "get-namespace",
+          "description": "Gets default namespace for a given file",
+          "type": "language",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "PATH",
+                  "description": "Path to the project",
+                  "type": "languagescript",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#-files/scripts/create.oilnk",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "console",
+              "description": "Creates a new C# console project",
+              "type": "languagescript",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#-files/scripts/create.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "PATH",
+                  "description": "Path to the project",
+                  "type": "languagescript",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#-files/scripts/create.oilnk",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "library",
+              "description": "Creates a new C# library project",
+              "type": "languagescript",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#-files/scripts/create.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "PATH",
+                  "description": "Path to the project",
+                  "type": "languagescript",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#-files/scripts/create.oilnk",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "service",
+              "description": "Creates a new C# windows service project",
+              "type": "languagescript",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#-files/scripts/create.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "create",
+          "description": "Creates C# projects",
+          "type": "languagescript",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#-files/scripts/create.oilnk",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "C#",
+      "description": "Commands for the C# plugin",
+      "type": "language",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/C#.oilnk",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "PATH",
+                  "description": "Path to the project to create",
+                  "type": "language",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/f#.oilnk",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "console",
+              "description": "F# console project",
+              "type": "language",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/f#.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "PATH",
+                  "description": "Path to the project to create",
+                  "type": "language",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/f#.oilnk",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "library",
+              "description": "F# library project",
+              "type": "language",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/f#.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "create",
+          "description": "Creates a new F# project",
+          "type": "language",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/f#.oilnk",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [],
+                      "cmd": "[ADDAFTER]",
+                      "description": "Project referenced file to add the new file after",
+                      "type": "language",
+                      "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/f#.oilnk",
+                      "updated": "2016.11.26 22:57:29"
+                    }
+                  ],
+                  "cmd": "PATH",
+                  "description": "Path to the file to create (without file extension",
+                  "type": "language",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/f#.oilnk",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "file",
+              "description": "Creates new file",
+              "type": "language",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/f#.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "new",
+          "description": "New templated file",
+          "type": "language",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/f#.oilnk",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "PATH",
+              "description": "Path to file to delete",
+              "type": "language",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/f#.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "deletefile",
+          "description": "Delete file from disk",
+          "type": "language",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/f#.oilnk",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "f#",
+      "description": "Commands for the f# plugin",
+      "type": "language",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/f#.oilnk",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [],
+      "cmd": "go",
+      "description": "Commands for the go plugin",
+      "type": "language",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/go",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "FILE",
+                  "description": "Path to file",
+                  "type": "languagescript",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/generate.php",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "command",
+              "description": "Creates a CQRS command",
+              "type": "languagescript",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/generate.php",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "FILE",
+                  "description": "Path to file",
+                  "type": "languagescript",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/generate.php",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "value",
+              "description": "Creates a CQRS value object",
+              "type": "languagescript",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/generate.php",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "FILE",
+                  "description": "Path to file",
+                  "type": "languagescript",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/generate.php",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "command-test",
+              "description": "Creates test fixture for a CQRS command",
+              "type": "languagescript",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/generate.php",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "FILE",
+                  "description": "Path to file",
+                  "type": "languagescript",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/generate.php",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "event",
+              "description": "Creates a CQRS event",
+              "type": "languagescript",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/generate.php",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "DIRECTORY",
+                  "description": "Path to folder holding the aggregate",
+                  "type": "languagescript",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/generate.php",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "aggregate",
+              "description": "Creates a CQRS aggregate, commandhandler and registers it",
+              "type": "languagescript",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/generate.php",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "FILE",
+                  "description": "Path to file",
+                  "type": "languagescript",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/generate.php",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "command-api",
+              "description": "Creates a RestCqrsController",
+              "type": "languagescript",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/generate.php",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "FILE",
+                  "description": "Path to file",
+                  "type": "languagescript",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/generate.php",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "command-api-test",
+              "description": "Creates a command api test file",
+              "type": "languagescript",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/generate.php",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "generate",
+          "description": "Generates a new class or domain concept",
+          "type": "languagescript",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/generate.php",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "FILE",
+                  "description": "Path to file",
+                  "type": "languagescript",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/new.php",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "file",
+              "description": "Create empty php file",
+              "type": "languagescript",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/new.php",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "FILE",
+                  "description": "Path to file",
+                  "type": "languagescript",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/new.php",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "class",
+              "description": "Create new class",
+              "type": "languagescript",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/new.php",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "FILE",
+                  "description": "Path to file",
+                  "type": "languagescript",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/new.php",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "interface",
+              "description": "Create new interface",
+              "type": "languagescript",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/new.php",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "FILE",
+                  "description": "Path to file",
+                  "type": "languagescript",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/new.php",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "fixture",
+              "description": "Create new phpunit test fixture",
+              "type": "languagescript",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/new.php",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "new",
+          "description": "Creates a new php file",
+          "type": "languagescript",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/new.php",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [],
+          "cmd": "php-create-melin",
+          "description": "Extends php new functionality",
+          "type": "languagescript",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/php-create-melin.php",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "php",
+      "description": "Commands for the php plugin",
+      "type": "language",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php.php",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [],
+      "cmd": "presenter",
+      "description": "Commands for the presenter plugin",
+      "type": "language",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/presenter.py",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "bleh",
+          "description": "Script description",
+          "type": "languagescript",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/python-files/scripts/bleh.sh",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "python",
+      "description": "Commands for the python plugin",
+      "type": "language",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/python.py",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "-k",
+          "description": "Kills processes",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/alive.sh",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "alive",
+      "description": "Checks whether any of the starting processes are still alive",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/alive.sh",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [],
+      "cmd": "environment-init-posix",
+      "description": "Initializing a freshly installed system",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/environment-init-posix.sh",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [],
+      "cmd": "extend-c-sharp-sln",
+      "description": "Script description?",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/extend-c-sharp-sln.py",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [],
+      "cmd": "extends-c-sharp-new",
+      "description": "Adds custom new commands for C#",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/extends-c-sharp-new.py",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [],
+      "cmd": "find-all",
+      "description": "Searches in contents of all files",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/find-all.oilnk",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [],
+      "cmd": "find-yml",
+      "description": "Finds content in yml files",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/find-yml.oilnk",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "SEARCH-STRING",
+          "description": "Pattern to search for. Defaults to cs file type",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/find.sh",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [],
+          "cmd": "[--type=]",
+          "description": "File type to search through",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/find.sh",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [],
+          "cmd": "[--path=]",
+          "description": "Will search throug files where full path contains this value",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/find.sh",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [],
+          "cmd": "[--match-case=]",
+          "description": "Matches string on exact case",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/find.sh",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "find",
+      "description": "Searches the file contents",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/find.sh",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "nancy",
+          "description": "Copys Nancy libraries to lib folder",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/get-lib.sh",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [],
+          "cmd": "nunit",
+          "description": "Copys NUnit libraries to lib folder",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/get-lib.sh",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [],
+          "cmd": "jsonnet",
+          "description": "Copys Json.Net libraries to lib folder",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/get-lib.sh",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "get-lib",
+      "description": "Copys library to lib folder",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/get-lib.sh",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [],
+                      "cmd": "FOLDERARGUMENTLIST",
+                      "description": "List of arguments that are spesific relative folders to replace in",
+                      "type": "script",
+                      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/git.sh",
+                      "updated": "2016.11.26 22:57:29"
+                    }
+                  ],
+                  "cmd": "REPLACEWITH",
+                  "description": "Value replace with",
+                  "type": "script",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/git.sh",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "LOOKFOR",
+              "description": "Value to look for",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/git.sh",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "renameall",
+          "description": "Rename files, folder and contents",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/git.sh",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "git",
+      "description": "Various git commands",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/git.sh",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "FILE",
+          "description": "Absolute or relative path to file. Will also try to parse line and column.",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/goto.py",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "goto",
+      "description": "Opens file in editor",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/goto.py",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "[LANGUAGES]",
+          "description": "Enabled languages for this config point using the first language as default language (C#,py)",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/init.py",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [],
+          "cmd": "[all]",
+          "description": "Initialize with all languages",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/init.py",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "init",
+      "description": "Initialize OpenIDE configuration point and setting up profile and sublime project",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/init.py",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "SEARCH_STRING",
+          "description": "String to match files by",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/locate.sh",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "locate",
+      "description": "Searches for files by name",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/locate.sh",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [],
+      "cmd": "process-foreground-focus-terminal",
+      "description": "Brings the terminal from the current desktop to front",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/process-foreground-focus-terminal.sh",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [],
+      "cmd": "query-http",
+      "description": "",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/query-http.js",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "[--default]",
+                  "description": "Will use the default configured package directory",
+                  "type": "script",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/sources.py",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "NAME",
+              "description": "Name of the package source to create",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/sources.py",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "create",
+          "description": "Creates source list for default package location",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/sources.py",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "[--default]",
+                  "description": "Will use the default configured package directory",
+                  "type": "script",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/sources.py",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "NAME",
+              "description": "Name of the package source to update",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/sources.py",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "update",
+          "description": "Updates source list for default package location",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/sources.py",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "sources",
+      "description": "Package source management",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/sources.py",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "silencio",
+              "description": "",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/ssh.sh",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [],
+              "cmd": "home",
+              "description": "",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/ssh.sh",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [],
+              "cmd": "devbox",
+              "description": "",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/ssh.sh",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [],
+              "cmd": "repositories",
+              "description": "",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/ssh.sh",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [],
+              "cmd": "trueafrican",
+              "description": "",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/ssh.sh",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [],
+              "cmd": "trueafrican-sharedspace",
+              "description": "",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/ssh.sh",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [],
+              "cmd": "melindev",
+              "description": "",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/ssh.sh",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "connect",
+          "description": "Connect to ssh server",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/ssh.sh",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "devbox",
+              "description": "",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/ssh.sh",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [],
+              "cmd": "trueafrican",
+              "description": "",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/ssh.sh",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [],
+              "cmd": "melindev",
+              "description": "",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/ssh.sh",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "forward",
+          "description": "Setup port forwards for server",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/ssh.sh",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "devbox",
+              "description": "",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/ssh.sh",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [],
+              "cmd": "trueafrican",
+              "description": "",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/ssh.sh",
+              "updated": "2016.11.26 22:57:29"
+            },
+            {
+              "arguments": [],
+              "cmd": "melindev",
+              "description": "",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/ssh.sh",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "unforward",
+          "description": "Setup port forwards for server",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/ssh.sh",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "ssh",
+      "description": "Handle ssh connections",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/ssh.sh",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "python",
+          "description": "Tryout stuff in python",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/tryout.py",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [],
+          "cmd": "php",
+          "description": "Tryout stuff in php",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/tryout.py",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [],
+          "cmd": "C#",
+          "description": "Tryout stuff in C# (Requires ContinuousTests or AutoTest.Net)",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/tryout.py",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "tryout",
+      "description": "Create a temporary space for trying out stuff",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/tryout.py",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "SSID",
+              "description": "Network to connect to",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/wlan.sh",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "connect",
+          "description": "Connects to a wireless network",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/wlan.sh",
+          "updated": "2016.11.26 22:57:29"
+        },
+        {
+          "arguments": [],
+          "cmd": "scan",
+          "description": "Scans for new available networks",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/wlan.sh",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "wlan",
+      "description": "Manage wlan connections (default lists available ssids)",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/wlan.sh",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "spa",
+              "description": "Single page applications using jQuery and handlebars",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/www.py",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "generate",
+          "description": "Commands for generating web stuff",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/www.py",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "www",
+      "description": "Various www commands",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/www.py",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "NAME",
+                  "description": "Command name",
+                  "type": "language",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/f#.oilnk",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "fsharp",
+              "description": "Create a new f# script",
+              "type": "language",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/f#.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "[[new]]",
+          "description": "",
+          "type": "language",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/f#.oilnk",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "[[script]]",
+      "description": "",
+      "type": "language",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/f#.oilnk",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "NAME",
+                  "description": "Command name",
+                  "type": "language",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/f#.oilnk",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "fsharp",
+              "description": "Create a new f# reactive script",
+              "type": "language",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/f#.oilnk",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "[[new]]",
+          "description": "",
+          "type": "language",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/f#.oilnk",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "[[rscript]]",
+      "description": "",
+      "type": "language",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/f#.oilnk",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "FILE",
+                  "description": "Path to file",
+                  "type": "languagescript",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/php-create-melin.php",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "clicommand",
+              "description": "Create new cli command",
+              "type": "languagescript",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/php-create-melin.php",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "[[new]]",
+          "description": "",
+          "type": "languagescript",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/php-create-melin.php",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "[[php]]",
+      "description": "",
+      "type": "languagescript",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/php-create-melin.php",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "FILE",
+                  "description": "Path to file",
+                  "type": "languagescript",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/php-create-melin.php",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "valueobject",
+              "description": "Create new value object",
+              "type": "languagescript",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/php-create-melin.php",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "[[new]]",
+          "description": "",
+          "type": "languagescript",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/php-create-melin.php",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "[[php]]",
+      "description": "",
+      "type": "languagescript",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/languages/php-files/scripts/php-create-melin.php",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [],
+          "cmd": "init",
+          "description": "Initializes a freshly installed system",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/environment-init-posix.sh",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "[[environment]]",
+      "description": "",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/environment-init-posix.sh",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "PATH",
+                  "description": "Path to the file to create",
+                  "type": "script",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/extends-c-sharp-new.py",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "sampleclass",
+              "description": "Creates a new sample class",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/extends-c-sharp-new.py",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "[[new]]",
+          "description": "",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/extends-c-sharp-new.py",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "[[C#]]",
+      "description": "",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/extends-c-sharp-new.py",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [
+            {
+              "arguments": [],
+              "cmd": "focus-terminal",
+              "description": "Bring terminal in current workspace to front",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/process-foreground-focus-terminal.sh",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "[[set-to-foreground]]",
+          "description": "",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/process-foreground-focus-terminal.sh",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "[[process]]",
+      "description": "",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/process-foreground-focus-terminal.sh",
+      "updated": "2016.11.26 22:57:29"
+    },
+    {
+      "arguments": [
+        {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "arguments": [],
+                  "cmd": "[DESTINATION]",
+                  "description": "Destination directory (default destination from config)",
+                  "type": "script",
+                  "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/sources.py",
+                  "updated": "2016.11.26 22:57:29"
+                }
+              ],
+              "cmd": "SOURCE",
+              "description": "Ex. .OpenIDE/scripts/myscript",
+              "type": "script",
+              "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/sources.py",
+              "updated": "2016.11.26 22:57:29"
+            }
+          ],
+          "cmd": "build",
+          "description": "Builds package and updates sources in default package destination",
+          "type": "script",
+          "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/sources.py",
+          "updated": "2016.11.26 22:57:29"
+        }
+      ],
+      "cmd": "[[package]]",
+      "description": "",
+      "type": "script",
+      "location": "/home/ack/bin/OpenIDE/.OpenIDE/scripts/sources.py",
+      "updated": "2016.11.26 22:57:29"
+    }
+  ]
+}

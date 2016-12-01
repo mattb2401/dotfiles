@@ -1,0 +1,22 @@
+{
+	"#Comment" : "Handlers are command arguments and stdout writelines",
+	"handlers" :
+	[
+		{
+			"handler" :
+			{
+				"arguments" : [ "|ANY|", "get-command-definitions" ],
+				"responses" : [ "Searches in contents of all files" ]
+			}
+		}
+	],
+	"link" :
+	{
+		"executable" : "oi",
+		"params" : "find {args} \"--type=*\"",
+		"#Comment" :
+			"Valid: {run-location} {global-profile} {local-profile} {args}",
+		"#Comment" :
+			"Paths uses / on all platforms"
+	}
+}

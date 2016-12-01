@@ -1,0 +1,14 @@
+{name},{verb}
+11|23
+public function test{name}()
+{
+    $client = static::createClient();
+    $client->request(
+        '{verb}',
+        static::API_URL.'/'.(string)Uuid::uuid1()
+    );
+
+    $response = $client->getResponse();
+    $this->assertEquals(Codes::HTTP_OK, $response->getStatusCode(), $response->getContent());
+    $this->commandIs('???');
+}

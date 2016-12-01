@@ -1,0 +1,616 @@
+{
+  "packages": [
+    {
+      "id": "C-Sharp",
+      "os": [
+        "linux",
+        "windows",
+        "osx"
+      ],
+      "version": "v1.4",
+      "name": "C# language plugin",
+      "description": "C# language plugin",
+      "package": "C-Sharp.oipkg"
+    },
+    {
+      "id": "F-Sharp",
+      "os": [
+        "linux",
+        "windows",
+        "osx"
+      ],
+      "version": "v0.1",
+      "name": "F# language plugin",
+      "description": "F# language plugin",
+      "package": "F-Sharp.oipkg"
+    },
+    {
+      "id": "ack-essentials-c-sharp",
+      "os": [
+        "linux",
+        "osx",
+        "windows"
+      ],
+      "version": "v1.0",
+      "name": "Ack Essentials C#",
+      "description": "Essential packages for my C# setup",
+      "package": "ack-essentials-c-sharp.meta"
+    },
+    {
+      "id": "ack-essentials",
+      "os": [
+        "linux",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "Ack Essentials",
+      "description": "The essential stuff I need to get by",
+      "package": "ack-essentials.meta"
+    },
+    {
+      "id": "ack-get-lib",
+      "os": [
+        "linux"
+      ],
+      "version": "v1.0",
+      "name": "Ack get lib",
+      "description": "Pulls various libraries",
+      "package": "ack-get-lib.oipkg"
+    },
+    {
+      "id": "ack-www",
+      "os": [
+        "linux",
+        "osx",
+        "windows"
+      ],
+      "version": "v1.0",
+      "name": "Ack www",
+      "description": "Scripts for various www stuff",
+      "package": "ack-www.oipkg"
+    },
+    {
+      "id": "alive",
+      "os": [
+        "linux",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "OpenIDE alive check",
+      "description": "Checks if any processes related to OpenIDE is running.",
+      "package": "alive.oipkg"
+    },
+    {
+      "id": "csproj-autoadd",
+      "os": [
+        "linux",
+        "windows",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "C# project auto add file",
+      "description": "Automatically adds .cs files to nearest C# project file",
+      "package": "autoadd-new-file-to-csproj.oipkg"
+    },
+    {
+      "id": "c-sharp-add-using",
+      "os": [
+        "linux",
+        "osx",
+        "windows"
+      ],
+      "version": "v1.0",
+      "name": "C# add using",
+      "description": "Handles adding usings for C#",
+      "package": "c-sharp-add-using.oipkg"
+    },
+    {
+      "id": "c-sharp-create-tested",
+      "os": [
+        "linux",
+        "osx",
+        "windows"
+      ],
+      "version": "v1.0",
+      "name": "C# create tested",
+      "description": "Creates C# libraries and classes with corresponding test library/fixture",
+      "package": "c-sharp-create-tested.oipkg"
+    },
+    {
+      "id": "c-sharp-editor-create",
+      "os": [
+        "linux",
+        "osx",
+        "windows"
+      ],
+      "version": "v1.0",
+      "name": "C# create from editor",
+      "description": "Create C# projects, files and references from editor",
+      "package": "c-sharp-editor-create.oipkg"
+    },
+    {
+      "id": "code-templates",
+      "os": [
+        "linux",
+        "windows",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "Ack Code Templates",
+      "description": "Simple small code snippets to insert here and there",
+      "package": "code-templates.oipkg"
+    },
+    {
+      "id": "contextual-tampering",
+      "os": [
+        "linux",
+        "windows",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "contextual-tampering",
+      "description": "A generic script for handling user selected actions for navigation and refactoring",
+      "package": "contextual-tampering.oipkg"
+    },
+    {
+      "id": "domhack",
+      "os": [
+        "linux"
+      ],
+      "version": "v1.0",
+      "name": "CSS Domhack",
+      "description": "Updates css classes in browser (node)",
+      "package": "domhack.oipkg"
+    },
+    {
+      "id": "edit-oi-scripts",
+      "os": [
+        "linux"
+      ],
+      "version": "v1.0",
+      "name": "edit-oi-scripts",
+      "description": "Trigger script editing from wihtin the editor",
+      "package": "edit-oi-scripts.oipkg"
+    },
+    {
+      "id": "evaluate-at-caret",
+      "os": [
+        "linux"
+      ],
+      "version": "v1.0",
+      "name": "evaluate-at-caret",
+      "description": "evaluate-at-caret rscript package",
+      "package": "evaluate-at-caret.oipkg"
+    },
+    {
+      "id": "evaluate-symfony-file",
+      "os": [
+        "linux"
+      ],
+      "version": "v1.0",
+      "name": "evaluate-symfony-file",
+      "description": "evaluate-symfony-file rscript package",
+      "package": "evaluate-symfony-file.oipkg"
+    },
+    {
+      "id": "express-query-route",
+      "os": [
+        "linux",
+        "osx",
+        "windows"
+      ],
+      "version": "v1.0",
+      "name": "Express query route under cursor",
+      "description": "Queries routes under cursor for the nodejs express framework",
+      "package": "express-query-route.oipkg"
+    },
+    {
+      "id": "extends-c-sharp-new",
+      "os": [
+        "linux",
+        "osx",
+        "windows"
+      ],
+      "version": "v1.0",
+      "name": "C# new extensions",
+      "description": "A script to easily extend the C# new command in all profiles",
+      "package": "extends-c-sharp-new.oipkg"
+    },
+    {
+      "id": "find-all",
+      "os": [
+        "linux"
+      ],
+      "version": "v1.0",
+      "name": "find-all",
+      "description": "find-all script package",
+      "package": "find-all.oipkg"
+    },
+    {
+      "id": "find-yml",
+      "os": [
+        "linux"
+      ],
+      "version": "v1.0",
+      "name": "find-yml",
+      "description": "find-yml script package",
+      "package": "find-yml.oipkg"
+    },
+    {
+      "id": "find",
+      "os": [
+        "linux",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "File search",
+      "description": "Code search matching on file contents, path and type using the native find command",
+      "package": "find.oipkg"
+    },
+    {
+      "id": "goto",
+      "os": [
+        "linux",
+        "windows",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "Goto file",
+      "description": "Opens a file in the text editor on a give line / column",
+      "package": "goto.oipkg"
+    },
+    {
+      "id": "init-sublime",
+      "os": [
+        "linux",
+        "windows",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "Initialize sublime",
+      "description": "Custom init script that inits, creates a Sublime project and an optional profile",
+      "package": "init-sublime.oipkg"
+    },
+    {
+      "id": "locate-files",
+      "os": [
+        "linux",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "Locate files",
+      "description": "Finds files by name",
+      "package": "locate-files.oipkg"
+    },
+    {
+      "id": "melin-cqrs-tampering-at-caret",
+      "os": [
+        "linux",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "Melin CQRS tampering at caret",
+      "description": "Adds scaffolding support for the portal CQRS stuff",
+      "package": "melin-cqrs-tampering-at-caret.oipkg"
+    },
+    {
+      "id": "melin-generate",
+      "os": [
+        "linux",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "Melin generate",
+      "description": "Generates various type files for the melin cqrs structure",
+      "package": "melin-generate.oipkg"
+    },
+    {
+      "id": "melin-portal-meta-package",
+      "os": [
+        "linux",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "melin-portal-meta-package",
+      "description": "melin-portal-meta-package",
+      "package": "melin-portal-meta-package.oipkg"
+    },
+    {
+      "id": "melinjs",
+      "os": [
+        "linux",
+        "windows",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "Melin Javscript Language Plugin",
+      "description": "Parses melin portal style javascript",
+      "package": "melinjs.oipkg"
+    },
+    {
+      "id": "metatest",
+      "os": [
+        "linux"
+      ],
+      "version": "v1.0",
+      "name": "metatest",
+      "description": "metatest package",
+      "package": "metatest.meta"
+    },
+    {
+      "id": "octopress",
+      "os": [
+        "linux",
+        "osx",
+        "windows"
+      ],
+      "version": "v1.0",
+      "name": "Octopress plugin",
+      "description": "Octopress plugin",
+      "package": "octopress.oipkg"
+    },
+    {
+      "id": "php-caret-create",
+      "os": [
+        "linux"
+      ],
+      "version": "v1.0",
+      "name": "php-caret-create",
+      "description": "php-caret-create rscript package",
+      "package": "php-caret-create.oipkg"
+    },
+    {
+      "id": "php-create-melin",
+      "os": [
+        "linux",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "php-create-melin",
+      "description": "Overload for the built in new command",
+      "package": "php-create-melin.oipkg"
+    },
+    {
+      "id": "php-go-to-definition",
+      "os": [
+        "linux",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "php-go-to-definition",
+      "description": "Adds go to definition support for php",
+      "package": "php-go-to-definition.oipkg"
+    },
+    {
+      "id": "php-new",
+      "os": [
+        "linux",
+        "windows",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "php-new",
+      "description": "Script for generating php files",
+      "package": "php-new.oipkg"
+    },
+    {
+      "id": "php-sentence-to-test",
+      "os": [
+        "linux"
+      ],
+      "version": "v1.0",
+      "name": "php-sentence-to-test",
+      "description": "php-sentence-to-test rscript package",
+      "package": "php-sentence-to-test.oipkg"
+    },
+    {
+      "id": "php-use-type",
+      "os": [
+        "linux",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "Php use type",
+      "description": "Adds contextual tamper option to add use statement for type",
+      "package": "php-use-type.oipkg"
+    },
+    {
+      "id": "php",
+      "os": [
+        "linux",
+        "osx",
+        "windows"
+      ],
+      "version": "v1.2",
+      "name": "Php language plugin",
+      "description": "Php language plugin",
+      "package": "php.oipkg"
+    },
+    {
+      "id": "phpunit-run-test",
+      "os": [
+        "linux",
+        "osx",
+        "windows"
+      ],
+      "version": "v1.0",
+      "name": "PHPUnit run test",
+      "description": "Runs a phpunit test when told to",
+      "package": "phpunit-run-test.oipkg"
+    },
+    {
+      "id": "presenter",
+      "os": [
+        "linux",
+        "osx",
+        "windows"
+      ],
+      "version": "v1.0",
+      "name": "Presenter plugin",
+      "description": "Python plugin",
+      "package": "presenter.oipkg"
+    },
+    {
+      "id": "query-mongo",
+      "os": [
+        "linux"
+      ],
+      "version": "v1.0",
+      "name": "melin-query-mongo",
+      "description": "query-mongo script package",
+      "package": "query-mongo.oipkg"
+    },
+    {
+      "id": "query-server",
+      "os": [
+        "linux"
+      ],
+      "version": "v1.0",
+      "name": "Query Server",
+      "description": "Queries running nancy server",
+      "package": "query-server.oipkg"
+    },
+    {
+      "id": "restart-rscript",
+      "os": [
+        "linux"
+      ],
+      "version": "v1.0",
+      "name": "Restart reactive script",
+      "description": "Lets you bind a shortcut key to restart the reactive script closest to the file you are editing.",
+      "package": "restart-rscript.oipkg"
+    },
+    {
+      "id": "run-in-browser",
+      "os": [
+        "linux",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "Continuous Web",
+      "description": "Opens an edited html page in the browser. Triggers on .html, .css and .js",
+      "package": "run-in-browser.oipkg"
+    },
+    {
+      "id": "sources",
+      "os": [
+        "linux",
+        "windows",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "Package Source Manager",
+      "description": "Creates and maintains .sources files for hosted package sources",
+      "package": "sources.oipkg"
+    },
+    {
+      "id": "spec-extractor",
+      "os": [
+        "linux"
+      ],
+      "version": "v1.0",
+      "name": "spec-extractor",
+      "description": "spec-extractor rscript package",
+      "package": "spec-extractor.oipkg"
+    },
+    {
+      "id": "ssh",
+      "os": [
+        "linux"
+      ],
+      "version": "v1.0",
+      "name": "ack-ssh",
+      "description": "My ssh connections and forwards",
+      "package": "ssh.oipkg"
+    },
+    {
+      "id": "symfony-app",
+      "os": [
+        "linux",
+        "windows",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "Symfony app",
+      "description": "Forward script to symfonys app/console",
+      "package": "symfony-app.oipkg"
+    },
+    {
+      "id": "symfony-navigate",
+      "os": [
+        "linux",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "Symfony navigate",
+      "description": "Adds navigation features to symfony",
+      "package": "symfony-navigate.oipkg"
+    },
+    {
+      "id": "symfony-route-navigation",
+      "os": [
+        "linux"
+      ],
+      "version": "v1.0",
+      "name": "symfony-route-navigation",
+      "description": "symfony-route-navigation rscript package",
+      "package": "symfony-route-navigation.oipkg"
+    },
+    {
+      "id": "tmux-editor-handler",
+      "os": [
+        "linux",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "Tmux Editor Emulator",
+      "description": "Uses tmux windows to emulate type search, user select, user input and file search",
+      "package": "tmux-editor-handler.oipkg"
+    },
+    {
+      "id": "tryout",
+      "os": [
+        "linux",
+        "windows",
+        "osx"
+      ],
+      "version": "v1.0",
+      "name": "Language tryout",
+      "description": "Creating a temporary space for trying out stuff.",
+      "package": "tryout.oipkg"
+    },
+    {
+      "id": "typesearch-extension",
+      "os": [
+        "linux",
+        "osx",
+        "windows"
+      ],
+      "version": "v1.0",
+      "name": "typesearch-extension",
+      "description": "Extends with reactive script extended type search",
+      "package": "typesearch-extension.oipkg"
+    },
+    {
+      "id": "update-diagram",
+      "os": [
+        "linux"
+      ],
+      "version": "v1.0",
+      "name": "Continuous Graphviz",
+      "description": "Reacts on graphviz diagram changes. Needs graphviz installed. Also uses the Remote Control plugin for firefox to pipe browser updates through port 32000",
+      "package": "update-diagram.oipkg"
+    },
+    {
+      "id": "wlan",
+      "os": [
+        "linux"
+      ],
+      "version": "v1.0",
+      "name": "wlan",
+      "description": "wlan script package",
+      "package": "wlan.oipkg"
+    }
+  ],
+  "origin": "/home/ack/bin/oi-packages/local.source"
+}

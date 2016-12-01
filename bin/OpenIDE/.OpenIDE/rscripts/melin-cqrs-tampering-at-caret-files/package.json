@@ -1,0 +1,75 @@
+{
+	"#Comment": "# is used here to comment out optional fields",
+	"#Comment": "supported os options are linux, osx and windows",
+	"#Comment": "pre and post install actions accepts only OpenIDE non edior commands",
+	"os": ["linux","osx"],
+	"target": "rscript",
+	"id": "melin-cqrs-tampering-at-caret",
+	"version": "v1.0",
+	"command": "melin-cqrs-tampering-at-caret",
+	"name": "Melin CQRS tampering at caret",
+	"description": "Adds scaffolding support for the portal CQRS stuff",
+	"#config-prefix": "melin-cqrs-tampering-at-caret.",
+	"#pre-install-actions": [],
+	"post-install-actions": [
+		{
+			"local": "command|conf contextual.tamper.php.php.apply.event=melin-cqrs-apply-event-from-caret",
+			"global": "command|conf contextual.tamper.php.php.apply.event=melin-cqrs-apply-event-from-caret -g"
+		},
+		{
+			"local": "command|conf contextual.tamper.php.php.create.event=melin-cqrs-event-from-caret",
+			"global": "command|conf contextual.tamper.php.php.create.event=melin-cqrs-event-from-caret -g"
+		},
+		{
+			"local": "command|conf contextual.tamper.php.php.handle.command=melin-cqrs-handle-command-from-caret",
+			"global": "command|conf contextual.tamper.php.php.handle.command=melin-cqrs-handle-command-from-caret -g"
+		},
+		{
+			"local": "command|conf contextual.tamper.php.php.new.command=melin-cqrs-new-command-from-caret",
+			"global": "command|conf contextual.tamper.php.php.new.command=melin-cqrs-new-command-from-caret -g"
+		},
+		{
+			"local": "command|conf contextual.tamper.php.php.new.command.api=melin-cqrs-new-command-api-from-caret",
+			"global": "command|conf contextual.tamper.php.php.new.command.api=melin-cqrs-new-command-api-from-caret -g"
+		}
+	],
+	"#pre-uninstall-actions": [],
+	"post-uninstall-actions": [
+		{
+			"local": "command|conf contextual.tamper.php.php.apply.event=melin-cqrs-apply-event-from-caret -d",
+			"global": "command|conf contextual.tamper.php.php.apply.event=melin-cqrs-apply-event-from-caret -g -d"
+		},
+		{
+			"local": "command|conf contextual.tamper.php.php.create.event=melin-cqrs-event-from-caret -d",
+			"global": "command|conf contextual.tamper.php.php.create.event=melin-cqrs-event-from-caret -g -d"
+		},
+		{
+			"local": "command|conf contextual.tamper.php.php.handle.command=melin-cqrs-handle-command-from-caret -d",
+			"global": "command|conf contextual.tamper.php.php.handle.command=melin-cqrs-handle-command-from-caret -g -d"
+		},
+		{
+			"local": "command|conf contextual.tamper.php.php.new.command=melin-cqrs-new-command-from-caret -d",
+			"global": "command|conf contextual.tamper.php.php.new.command=melin-cqrs-new-command-from-caret -g -d"
+		},
+		{
+			"local": "command|conf contextual.tamper.php.php.new.command.api=melin-cqrs-new-command-api-from-caret -d",
+			"global": "command|conf contextual.tamper.php.php.new.command.api=melin-cqrs-new-command-api-from-caret -g -d"
+		}
+	],
+	"#dependencies": [
+			{
+				"id": "contextual-tampering",
+				"versions":
+				[
+					"v1.0"
+				]
+			},
+			{
+				"id": "melin-generate",
+				"versions":
+				[
+					"v1.0"
+				]
+			}
+		]
+}

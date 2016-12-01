@@ -1,0 +1,36 @@
+{
+	"#Comment": "# is used here to comment out optional fields",
+	"#Comment": "supported os options are linux, osx and windows",
+	"#Comment": "pre and post install actions accepts only OpenIDE non edior commands",
+	"os": ["linux"],
+	"target": "rscript",
+	"id": "edit-oi-scripts",
+	"version": "v1.0",
+	"command": "edit-oi-scripts",
+	"name": "edit-oi-scripts",
+	"description": "Trigger script editing from wihtin the editor",
+	"#config-prefix": "edit-oi-scripts.",
+	"#pre-install-actions": [],
+	"post-install-actions": [
+		{ 
+			"local": "command|conf contextual.navigate.any.any.edit.scripts=edit-oi-scripts",
+			"global": "command|conf contextual.navigate.any.any.edit.scripts=edit-oi-scripts -g"
+		}
+	],
+	"#pre-uninstall-actions": [],
+	"post-uninstall-actions": [
+		{ 
+			"local": "command|conf contextual.navigate.any.any.edit.scripts -d",
+			"global": "command|conf contextual.navigate.any.any.edit.scripts -d -g"
+		}
+	],
+	"dependencies": [
+			{
+				"id": "contextual-tampering",
+				"versions":
+				[
+					"v1.0"
+				]
+			}
+		]
+}
