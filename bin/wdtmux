@@ -1,0 +1,25 @@
+#!/bin/bash
+
+SESSIONNAME=$(basename $(pwd) | sed "s/\.//g")
+if [ "$#" -gt 0 ]; then
+    SESSIONNAME=$1
+fi
+PWD=$(pwd)
+CLOSEST_OI=$(oi conf read rootpoint)
+
+/usr/bin/tmux has-session -t $SESSIONNAME &> /dev/null
+if [ $? != 0 ]; then
+    wdtmux-local $SESSIONNAME /usr/bin/tmux &> /dev/null
+    /usr/bin/tmux has-session -t $SESSIONNAME &> /dev/null
+    if [ $? != 0 ]; then
+        if [ "$CLOSEST_OI" = "$PWD" ]; then
+            /usr/bin/tmux new-session -s $SESSIONNAME -n script -d
+        fi
+    fi
+fi
+
+/usr/bin/tmux has-session -t $SESSIONNAME &> /dev/null
+if [ $? != 0 ]; then
+    /usr/bin/tmux new-session -s $SESSIONNAME -n script -d
+fi
+/usr/bin/tmux attach -t $SESSIONNAME

@@ -1,0 +1,6 @@
+:set hintchars=hjkasdfgyuiopwernmcvb349
+:noremap j 6j
+:noremap k 6k
+:noremap h 6h
+:noremap l 6l
+:noremap <s-space> /

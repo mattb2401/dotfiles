@@ -1,0 +1,7 @@
+!Map caps lock to escape
+!remove Lock = Caps_Lock
+!keysym Escape = Caps_Lock
+!keysym Caps_Lock = Escape
+!add Lock = Caps_Lock
+
+keycode 127 = Insert Insert
