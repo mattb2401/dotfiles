@@ -2,7 +2,7 @@
 All the configuratoin, binaries and dot files for a "clean" system
 
 ## Tmux
-Start tmux either by runnin tmux or wdtmux (starts a named tmux session for current directory). Use tmux attach to start tmux and attach to a already running session.
+Start tmux either by runnin tmux. Use tmux attach to start tmux and attach to a already running session. Or use wdtmux which starts or attaches to a tmux session named by convention using current directory.
 
 | Keyboard shortcut                         | Description                                     |
 |:------------------------------------------|:------------------------------------------------|
