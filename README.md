@@ -7,11 +7,14 @@ All the configuratoin, binaries and dot files for a "clean" system
 |:------------------------------------------|:------------------------------------------------|
 | Ctrl+A, "                                 | Split pane horizontally                         |
 | Ctrl+A, %                                 | Split pane vertically                           |
+| Ctrl+A, r                                 | Split pane horizontally small                   |
+| Ctrl+A, t                                 | Split pane vertically small                     |
 | Ctrl+A, q                                 | Close pane                                      |
 | Ctrl+A, h                                 | Select left pane                                |
 | Ctrl+A, j                                 | Select pane below                               |
 | Ctrl+A, k                                 | Select pane above                               |
 | Ctrl+A, l                                 | Select right pane                               |
+| Ctrl+A, b                                 | Toggle zoom on other pane                       |
 | Ctrl+A, c                                 | Create new window (tab)                         |
 | Ctrl+A, [0-9]                             | Select window                                   |
 | Ctrl+A, o                                 | Toggle last window                              |
