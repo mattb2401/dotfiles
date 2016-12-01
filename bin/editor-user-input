@@ -1,0 +1,85 @@
+#!/usr/bin/env python
+import os, sys, curses, curses.textpad, subprocess, pprint
+
+def set_shorter_esc_delay_in_os():
+    try:
+        os.environ['ESCDELAY']
+    except KeyError:
+        os.environ['ESCDELAY'] = '25'
+    return
+
+set_shorter_esc_delay_in_os()
+
+screen = curses.initscr()
+curses.noecho()
+screen.keypad(1)
+height,width = screen.getmaxyx()
+
+windowPadding = 3
+
+def runProcess(exe):    
+    p = subprocess.Popen(exe, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    lines = []
+    while(True):
+        retcode = p.poll() # returns None while subprocess is running
+        line = p.stdout.readline().decode(encoding='windows-1252').strip('\n').strip('\r')
+        if line != "":
+            lines.append(line)
+        if(line == "" and retcode is not None):
+            break
+    return lines
+
+if __name__ == "__main__":
+    response = None
+    path = sys.argv[1]
+    correlationId = sys.argv[2]
+    word = ""
+    for chunk in sys.argv[3:]:
+        word = word+" "+chunk
+    word = word.strip(" ")
+    os.chdir(path) 
+    pos = len(word)
+    screen.addstr(0, windowPadding, "Input value")
+    screen.addstr(1, windowPadding, word.ljust(width-windowPadding))
+    screen.move(1, windowPadding+pos)
+    while 1:
+        c = screen.getch()
+        if c == 27:
+            break
+        # backspace
+        elif c == curses.KEY_BACKSPACE:
+            if pos > 0:
+                word = word[0:pos-1]+word[pos:]
+                pos = pos -1
+        elif c == curses.KEY_LEFT:
+            if pos > 0:
+                pos = pos -1
+            screen.move(1, pos+windowPadding)
+            continue
+        elif c == curses.KEY_RIGHT:
+            if pos < len(word):
+                pos = pos +1
+            screen.move(1, pos+windowPadding)
+            continue
+        elif c == curses.KEY_HOME:
+            screen.move(1, windowPadding)
+            pos = 0
+            continue
+        elif c == curses.KEY_END:
+            screen.move(1, windowPadding+len(word))
+            pos = len(word)
+            continue
+        elif c == ord("\n"):
+            response = "'user-inputted' '"+correlationId+"' '"+word+"'"
+            break
+        else:
+            word = word[0:pos]+chr(c)+word[pos:]
+            pos = pos + 1
+        screen.addstr(1, windowPadding, word.ljust(width-windowPadding))
+        screen.move(1, pos+windowPadding) 
+    curses.endwin()
+    if response == None:
+        response = "\"'user-inputted' '"+correlationId+"' 'user-cancelled'\""
+    for line in runProcess(['oi', 'codemodel', 'publish', response]):
+        pass
+

@@ -1,0 +1,163 @@
+#!/usr/bin/env python
+import os, sys, curses, curses.textpad, subprocess, pprint
+
+def set_shorter_esc_delay_in_os():
+    try:
+        os.environ['ESCDELAY']
+    except KeyError:
+        os.environ['ESCDELAY'] = '25'
+    return
+
+set_shorter_esc_delay_in_os()
+
+screen = curses.initscr()
+curses.noecho()
+screen.keypad(1)
+height,width = screen.getmaxyx()
+
+matches = []
+selected = -1
+listStart = 3
+listHeight = height - listStart - 1
+windowPadding = 3
+markerPosition = windowPadding-2
+column_name_start = windowPadding
+list_width = width - (windowPadding*2)
+
+def setColumnSizes(nameLength):
+    global column_name_width
+    global column_file_start
+    global column_file_width
+    column_name_width = nameLength
+    column_file_start = windowPadding+column_name_width+1
+    column_file_width = width - ((windowPadding*2)+column_name_width+1)
+    screen.addstr(listStart-1, column_name_start, "Name".ljust(column_name_width))
+    screen.addstr(listStart-1, column_file_start, "File".ljust(column_file_width))
+
+setColumnSizes(20)
+
+def runProcess(exe):    
+    p = subprocess.Popen(exe, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    lines = []
+    while(True):
+        retcode = p.poll() # returns None while subprocess is running
+        line = p.stdout.readline().decode(encoding='windows-1252').strip('\n').strip('\r')
+        if line != "":
+            lines.append(line)
+        if(line == "" and retcode is not None):
+            break
+    return lines
+
+def clearSelection():
+    global selected
+    if selected != -1:
+        screen.addstr(selected+listStart, markerPosition, " ")
+        selected = -1
+
+def drawSelection(nr):
+    clearSelection()
+    global selected
+    screen.addstr(nr+listStart, markerPosition, "*")
+    selected = nr
+
+def search(screen, term):
+    global matches
+    def split(line):
+        return line.split("|")
+    matches = []
+    searchResult = map(split, runProcess(["oi", "codemodel", "find-types", term, str(listHeight)]))
+    file = None
+    for chunks in searchResult:
+        if chunks[0] == "file":
+            file = chunks[1]
+        elif len(chunks) > 6:
+            matches.append({'file': file, 'chunks': chunks})
+    nameLength = 0
+    for match in matches:
+        if len(match['chunks'][4]) > nameLength:
+            nameLength = len(match['chunks'][4])
+    setColumnSizes(nameLength) 
+
+    def just(string, length):
+        if len(string) > length:
+            return "..."+string[len(string)-length+3:]
+        return string.ljust(length)
+    n = listStart
+    for match in matches:
+        screen.addstr(n, column_name_start, just(match['chunks'][4], column_name_width))
+        screen.addstr(n, column_file_start, just(match['file'], column_file_width))
+        n = n + 1
+    screen.clrtobot()
+    if len(matches) > 0:
+        drawSelection(0)
+    else:
+        clearSelection()
+    screen.refresh()
+
+if __name__ == "__main__":
+    path = sys.argv[1]
+    os.chdir(path) 
+    column_file_width
+    screen.move(0, windowPadding)
+    word = ""
+    pos = 0
+    gotoStatement = None
+    while 1:
+        c = screen.getch()
+        if c == 27:
+            break
+        # backspace
+        elif c == curses.KEY_BACKSPACE:
+            if pos > 0:
+                word = word[0:pos-1]+word[pos:]
+                pos = pos -1
+        elif c == curses.KEY_LEFT:
+            if pos > 0:
+                pos = pos -1
+            screen.move(0, pos+windowPadding)
+            continue
+        elif c == curses.KEY_RIGHT:
+            if pos < len(word):
+                pos = pos +1
+            screen.move(0, pos+windowPadding)
+            continue
+        elif c == curses.KEY_HOME:
+            screen.move(0, windowPadding)
+            pos = 0
+            continue
+        elif c == curses.KEY_END:
+            screen.move(0, windowPadding+len(word))
+            pos = len(word)
+            continue
+        elif c == curses.KEY_DOWN:
+            if selected == len(matches)-1:
+                continue
+            drawSelection(selected+1)
+            screen.move(0, pos+windowPadding) 
+            continue
+        elif c == curses.KEY_UP:
+            if selected == 0:
+                continue
+            drawSelection(selected-1)
+            screen.move(0, pos+windowPadding) 
+            continue
+        elif c == ord("\t"):
+            search(screen, word)
+            screen.move(0, pos+windowPadding) 
+            continue
+        elif c == ord("\n"):
+            file = matches[selected]['file']
+            line = matches[selected]['chunks'][7]
+            column = matches[selected]['chunks'][8]
+            gotoStatement = file+"|"+line+"|"+column
+            break
+        else:
+            word = word[0:pos]+chr(c)+word[pos:]
+            pos = pos + 1
+        screen.addstr(0, windowPadding, word.ljust(list_width))
+        screen.move(0, pos+windowPadding) 
+    curses.endwin()
+    if gotoStatement != None:
+        for x in runProcess(["oi", "editor", "goto", gotoStatement]):
+            pass
+

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+SESSIONNAME=$(basename $(pwd) | sed "s/\.//g")
+if [ "$#" -gt 0 ]; then
+    SESSIONNAME=$1
+fi
+
+/usr/bin/tmux has-session -t $SESSIONNAME &> /dev/null
+if [ $? != 0 ]; then
+    /usr/bin/tmux new-session -s $SESSIONNAME -n script -d
+    /usr/bin/tmux send-keys -t $SESSIONNAME "oivim" C-m
+fi
+/usr/bin/tmux attach -t $SESSIONNAME

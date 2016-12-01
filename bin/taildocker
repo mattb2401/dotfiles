@@ -1,0 +1,10 @@
+#!/bin/bash
+
+docker ps | awk '{print $(NF)}' | grep "^$1" |
+{
+    while read dockerName
+        do docker logs -f $dockerName &
+    done
+    trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
+    wait
+}
