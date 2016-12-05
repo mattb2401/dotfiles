@@ -295,7 +295,7 @@ function! My_unindent(mode)
 endfunction
 
 set tabline=%!MyTabLine()  " custom tab pages line
-function MyTabLine()
+function! MyTabLine()
         let s = '' " complete tabline goes here
         " loop through each tab page
         for t in range(tabpagenr('$'))
@@ -422,12 +422,75 @@ map <A-n> :let x = system("oi codemodel publish \"." . &ft . " command new-from-
 map yyn :let x = system("oi codemodel publish \"." . &ft . " command new-from-caret\"")<cr>
 map <A-e> :let x = system("oi codemodel publish \"." . &ft . " command evaluate-file\"")<cr>
 map 0e :let x = system("oi codemodel publish \"." . &ft . " command evaluate-file\"")<cr>
+map <A-w> :<C-u>call SendSelectionToOpenIDEAsFile("repl")<cr>
+map yyw :<C-u>call SendSelectionToOpenIDEAsFile("repl")<cr>
+map <A-q>w :let x = system("oi codemodel publish \"." .&ft . " command repl 'clearOIRepl'\"")<cr>
+map yyqw :let x = system("oi codemodel publish \"." .&ft . " command repl 'clearOIRepl'\"")<cr>
 "map <C-p> :let x = system("/home/ack/bin/OpenIDE/.OpenIDE/rscripts/tmux-editor-handler-files/file-search-launcher")<cr>
 "imap <C-p> <Esc> :let x = system("/home/ack/bin/OpenIDE/.OpenIDE/rscripts/tmux-editor-handler-files/file-search-launcher")<cr>
 
+function! SendSelectionToOpenIDEAsFile(oiCmd)
+    let selection = s:get_visual_selection("||newline||")
+    let selection = s:strreplace(selection, "\"", "||q||")
+    let selection = s:strreplace(selection, "'", "||sq||")
+    let selection = s:strreplace(selection, "$", "||dollar||")
+    let x = system("oi codemodel publish \"." .&ft . " command " . a:oiCmd .  " '" . selection . "'\"")
+    "system("oi codemodel publish \"." . &ft . " fromvim \"" . selection . "\"")
+endfunction
+
+func! s:strfind(s,find,start)
+        if type(a:find)==1
+                let l:i = a:start
+                while l:i<len(a:s)
+                        if strpart(a:s,l:i,len(a:find))==a:find
+                                return l:i
+                        endif
+                        let l:i+=1
+                endwhile
+                return -1
+        elseif type(a:find)==3
+                " a:find is a list
+                let l:i = a:start
+                while l:i<len(a:s)
+                        let l:j=0
+                        while l:j<len(a:find)
+                                if strpart(a:s,l:i,len(a:find[l:j]))==a:find[l:j]
+                                        return [l:i,l:j]
+                                endif
+                                let l:j+=1
+                        endwhile
+                        let l:i+=1
+                endwhile
+                return [-1,-1]
+        endif
+endfunc
+
+func! s:strreplace(s,find,replace)
+        if len(a:find)==0
+                return a:s
+        endif
+        if type(a:find)==1 && type(a:replace)==1
+                let l:ret = a:s
+                let l:i = s:strfind(l:ret,a:find,0)
+                while l:i!=-1
+                        let l:ret = strpart(l:ret,0,l:i).a:replace.strpart(l:ret,l:i+len(a:find))
+                        let l:i = s:strfind(l:ret,a:find,l:i+len(a:replace))
+                endwhile
+                return l:ret
+        elseif  type(a:find)==3 && type(a:replace)==3 && len(a:find)==len(a:replace)
+                let l:ret = a:s
+                let [l:i,l:j] = s:strfind(l:ret,a:find,0)
+                while l:i!=-1
+                        let l:ret = strpart(l:ret,0,l:i).a:replace[l:j].strpart(l:ret,l:i+len(a:find[l:j]))
+                        let [l:i,l:j] = s:strfind(l:ret,a:find,l:i+len(a:replace[l:j]))
+                endwhile
+                return l:ret
+        endif
+endfunc
+
 "here is a more exotic version of my original Kwbd script
 "delete the buffer; keep windows; create a scratch buffer if no buffers left
-function s:Kwbd(kwbdStage)
+function! s:Kwbd(kwbdStage)
   if(a:kwbdStage == 1)
     if(!buflisted(winbufnr(0)))
       bd!
@@ -484,6 +547,17 @@ function s:Kwbd(kwbdStage)
   endif
 endfunction
 
+" Creds to peterodding.com
+function! s:get_visual_selection(separator)
+  " Why is this not a built-in Vim script function?!
+  let [lnum1, col1] = getpos("'<")[1:2]
+  let [lnum2, col2] = getpos("'>")[1:2]
+  let lines = getline(lnum1, lnum2)
+  let lines[-1] = lines[-1][: col2 - (&selection == 'inclusive' ? 1 : 2)]
+  let lines[0] = lines[0][col1 - 1:]
+  return join(lines, a:separator)
+endfunction
+
 command! Kwbd call s:Kwbd(1)
 nnoremap <silent> <Plug>Kwbd :<C-u>Kwbd<CR>
 
@@ -512,7 +586,20 @@ map <Leader> <Plug>(easymotion-prefix)
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 
-let g:fsharp_xbuild_path = "/urs/bin/xbuild"
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
+let g:fsharp_xbuild_path = "/usr/bin/xbuild"
 let g:fsharp_completion_helptext=1
 let g:fsharp_only_check_errors_on_write=1
 
