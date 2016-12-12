@@ -190,7 +190,6 @@ imap <C-f>6 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv5jg0><Esc>5jo}
 imap <C-f>7 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv6jg0><Esc>6jo}
 imap <C-f>8 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv7jg0><Esc>7jo}
 imap <C-f>9 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv8jg0><Esc>8jo}
-
 imap <C-f>10 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv9jg0><Esc>9jo}
 imap <C-f>11 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv10jg0><Esc>10jo}
 imap <C-f>12 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv11jg0><Esc>11jo}
@@ -201,7 +200,6 @@ imap <C-f>16 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv15jg0><Esc>15jo}
 imap <C-f>17 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv16jg0><Esc>16jo}
 imap <C-f>18 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv17jg0><Esc>17jo}
 imap <C-f>19 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv18jg0><Esc>18jo}
-
 imap <C-f>20 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv19jg0><Esc>19jo}
 imap <C-f>21 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv20jg0><Esc>20jo}
 imap <C-f>22 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv21jg0><Esc>21jo}
@@ -212,7 +210,6 @@ imap <C-f>26 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv25jg0><Esc>25jo}
 imap <C-f>27 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv26jg0><Esc>26jo}
 imap <C-f>28 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv27jg0><Esc>27jo}
 imap <C-f>29 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv28jg0><Esc>28jo}
-
 imap <C-f>30 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv29jg0><Esc>29jo}
 imap <C-f>31 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv30jg0><Esc>30jo}
 imap <C-f>32 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv31jg0><Esc>31jo}
@@ -223,7 +220,6 @@ imap <C-f>36 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv35jg0><Esc>35jo}
 imap <C-f>37 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv36jg0><Esc>36jo}
 imap <C-f>38 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv37jg0><Esc>37jo}
 imap <C-f>39 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv38jg0><Esc>38jo}
-
 imap <C-f>40 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv39jg0><Esc>39jo}
 imap <C-f>41 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv40jg0><Esc>40jo}
 imap <C-f>42 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv41jg0><Esc>41jo}
@@ -234,7 +230,6 @@ imap <C-f>46 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv45jg0><Esc>45jo}
 imap <C-f>47 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv46jg0><Esc>46jo}
 imap <C-f>48 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv47jg0><Esc>47jo}
 imap <C-f>49 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv48jg0><Esc>48jo}
-
 imap <C-f>50 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv49jg0><Esc>49jo}
 imap <C-f>51 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv50jg0><Esc>50jo}
 imap <C-f>52 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv51jg0><Esc>51jo}
@@ -245,6 +240,67 @@ imap <C-f>56 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv55jg0><Esc>55jo}
 imap <C-f>57 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv56jg0><Esc>56jo}
 imap <C-f>58 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv57jg0><Esc>57jo}
 imap <C-f>59 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv58jg0><Esc>58jo}
+
+map <C-f>0 :<C-u>call MyAppendToEnd(" {")<CR>o}
+map <C-f>1 :<C-u>call MyAppendToEnd(" {")<CR>jg0>>o}
+map <C-f>2 :<C-u>call MyAppendToEnd(" {")<CR>jv1jg0><Esc>1jo}
+map <C-f>3 :<C-u>call MyAppendToEnd(" {")<CR>jv2jg0><Esc>2jo}
+map <C-f>4 :<C-u>call MyAppendToEnd(" {")<CR>jv3jg0><Esc>3jo}
+map <C-f>5 :<C-u>call MyAppendToEnd(" {")<CR>jv4jg0><Esc>4jo}
+map <C-f>6 :<C-u>call MyAppendToEnd(" {")<CR>jv5jg0><Esc>5jo}
+map <C-f>7 :<C-u>call MyAppendToEnd(" {")<CR>jv6jg0><Esc>6jo}
+map <C-f>8 :<C-u>call MyAppendToEnd(" {")<CR>jv7jg0><Esc>7jo}
+map <C-f>9 :<C-u>call MyAppendToEnd(" {")<CR>jv8jg0><Esc>8jo}
+map <C-f>10 :<C-u>call MyAppendToEnd(" {")<CR>jv9jg0><Esc>9jo}
+map <C-f>11 :<C-u>call MyAppendToEnd(" {")<CR>jv10jg0><Esc>10jo}
+map <C-f>12 :<C-u>call MyAppendToEnd(" {")<CR>jv11jg0><Esc>11jo}
+map <C-f>13 :<C-u>call MyAppendToEnd(" {")<CR>jv12jg0><Esc>12jo}
+map <C-f>14 :<C-u>call MyAppendToEnd(" {")<CR>jv13jg0><Esc>13jo}
+map <C-f>15 :<C-u>call MyAppendToEnd(" {")<CR>jv14jg0><Esc>14jo}
+map <C-f>16 :<C-u>call MyAppendToEnd(" {")<CR>jv15jg0><Esc>15jo}
+map <C-f>17 :<C-u>call MyAppendToEnd(" {")<CR>jv16jg0><Esc>16jo}
+map <C-f>18 :<C-u>call MyAppendToEnd(" {")<CR>jv17jg0><Esc>17jo}
+map <C-f>19 :<C-u>call MyAppendToEnd(" {")<CR>jv18jg0><Esc>18jo}
+map <C-f>20 :<C-u>call MyAppendToEnd(" {")<CR>jv19jg0><Esc>19jo}
+map <C-f>21 :<C-u>call MyAppendToEnd(" {")<CR>jv20jg0><Esc>20jo}
+map <C-f>22 :<C-u>call MyAppendToEnd(" {")<CR>jv21jg0><Esc>21jo}
+map <C-f>23 :<C-u>call MyAppendToEnd(" {")<CR>jv22jg0><Esc>22jo}
+map <C-f>24 :<C-u>call MyAppendToEnd(" {")<CR>jv23jg0><Esc>23jo}
+map <C-f>25 :<C-u>call MyAppendToEnd(" {")<CR>jv24jg0><Esc>24jo}
+map <C-f>26 :<C-u>call MyAppendToEnd(" {")<CR>jv25jg0><Esc>25jo}
+map <C-f>27 :<C-u>call MyAppendToEnd(" {")<CR>jv26jg0><Esc>26jo}
+map <C-f>28 :<C-u>call MyAppendToEnd(" {")<CR>jv27jg0><Esc>27jo}
+map <C-f>29 :<C-u>call MyAppendToEnd(" {")<CR>jv28jg0><Esc>28jo}
+map <C-f>30 :<C-u>call MyAppendToEnd(" {")<CR>jv29jg0><Esc>29jo}
+map <C-f>31 :<C-u>call MyAppendToEnd(" {")<CR>jv30jg0><Esc>30jo}
+map <C-f>32 :<C-u>call MyAppendToEnd(" {")<CR>jv31jg0><Esc>31jo}
+map <C-f>33 :<C-u>call MyAppendToEnd(" {")<CR>jv32jg0><Esc>32jo}
+map <C-f>34 :<C-u>call MyAppendToEnd(" {")<CR>jv33jg0><Esc>33jo}
+map <C-f>35 :<C-u>call MyAppendToEnd(" {")<CR>jv34jg0><Esc>34jo}
+map <C-f>36 :<C-u>call MyAppendToEnd(" {")<CR>jv35jg0><Esc>35jo}
+map <C-f>37 :<C-u>call MyAppendToEnd(" {")<CR>jv36jg0><Esc>36jo}
+map <C-f>38 :<C-u>call MyAppendToEnd(" {")<CR>jv37jg0><Esc>37jo}
+map <C-f>39 :<C-u>call MyAppendToEnd(" {")<CR>jv38jg0><Esc>38jo}
+map <C-f>40 :<C-u>call MyAppendToEnd(" {")<CR>jv39jg0><Esc>39jo}
+map <C-f>41 :<C-u>call MyAppendToEnd(" {")<CR>jv40jg0><Esc>40jo}
+map <C-f>42 :<C-u>call MyAppendToEnd(" {")<CR>jv41jg0><Esc>41jo}
+map <C-f>43 :<C-u>call MyAppendToEnd(" {")<CR>jv42jg0><Esc>42jo}
+map <C-f>44 :<C-u>call MyAppendToEnd(" {")<CR>jv43jg0><Esc>43jo}
+map <C-f>45 :<C-u>call MyAppendToEnd(" {")<CR>jv44jg0><Esc>44jo}
+map <C-f>46 :<C-u>call MyAppendToEnd(" {")<CR>jv45jg0><Esc>45jo}
+map <C-f>47 :<C-u>call MyAppendToEnd(" {")<CR>jv46jg0><Esc>46jo}
+map <C-f>48 :<C-u>call MyAppendToEnd(" {")<CR>jv47jg0><Esc>47jo}
+map <C-f>49 :<C-u>call MyAppendToEnd(" {")<CR>jv48jg0><Esc>48jo}
+map <C-f>50 :<C-u>call MyAppendToEnd(" {")<CR>jv49jg0><Esc>49jo}
+map <C-f>51 :<C-u>call MyAppendToEnd(" {")<CR>jv50jg0><Esc>50jo}
+map <C-f>52 :<C-u>call MyAppendToEnd(" {")<CR>jv51jg0><Esc>51jo}
+map <C-f>53 :<C-u>call MyAppendToEnd(" {")<CR>jv52jg0><Esc>52jo}
+map <C-f>54 :<C-u>call MyAppendToEnd(" {")<CR>jv53jg0><Esc>53jo}
+map <C-f>55 :<C-u>call MyAppendToEnd(" {")<CR>jv54jg0><Esc>54jo}
+map <C-f>56 :<C-u>call MyAppendToEnd(" {")<CR>jv55jg0><Esc>55jo}
+map <C-f>57 :<C-u>call MyAppendToEnd(" {")<CR>jv56jg0><Esc>56jo}
+map <C-f>58 :<C-u>call MyAppendToEnd(" {")<CR>jv57jg0><Esc>57jo}
+map <C-f>59 :<C-u>call MyAppendToEnd(" {")<CR>jv58jg0><Esc>58jo}
 
 imap <C-f>} <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv}g0><Esc>}o}
 
@@ -589,6 +645,7 @@ omap / <Plug>(easymotion-tn)
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
+set statusline=%F%m%r%h%w\ %v:%l\ %L\ %p%%
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
