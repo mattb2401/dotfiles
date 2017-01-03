@@ -30,6 +30,8 @@ if (endsWith($location['file'], '.php')) {
     $appPath = "";
     if (is_dir("backend"))
         $appPath = " -c backend/app";
+    if (is_file("app/phpunit.xml"))
+        $appPath = " -c app";
 	$cmd   = "oi app phpunit ".$appPath." --filter \"/::".$test."*$/\" \"".$filepath."\"";
 	if ($test === null) {
 		echo "color|DarkYellow|".$filepath."\n";

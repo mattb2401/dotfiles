@@ -482,6 +482,12 @@ map <A-w> :<C-u>call SendSelectionToOpenIDEAsFile("repl")<cr>
 map yyw :<C-u>call SendSelectionToOpenIDEAsFile("repl")<cr>
 map <A-q>w :let x = system("oi codemodel publish \"." .&ft . " command repl 'clearOIRepl'\"")<cr>
 map yyqw :let x = system("oi codemodel publish \"." .&ft . " command repl 'clearOIRepl'\"")<cr>
+map <A-f> :let x = system("oi codemodel publish \"." .&ft . " command find-interactive\"")<cr>
+map yyf :let x = system("oi codemodel publish \"." .&ft . " command find-interactive\"")<cr>
+map <A-f>a :let x = system("oi codemodel publish \"." .&ft . " command find-interactive-all\"")<cr>
+map yyfa :let x = system("oi codemodel publish \"." .&ft . " command find-interactive-all\"")<cr>
+map <A-f>y :let x = system("oi codemodel publish \"." .&ft . " command find-interactive-yml\"")<cr>
+map yyfy :let x = system("oi codemodel publish \"." .&ft . " command find-interactive-yml\"")<cr>
 "map <C-p> :let x = system("/home/ack/bin/OpenIDE/.OpenIDE/rscripts/tmux-editor-handler-files/file-search-launcher")<cr>
 "imap <C-p> <Esc> :let x = system("/home/ack/bin/OpenIDE/.OpenIDE/rscripts/tmux-editor-handler-files/file-search-launcher")<cr>
 
@@ -659,4 +665,16 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:fsharp_xbuild_path = "/usr/bin/xbuild"
 let g:fsharp_completion_helptext=1
 let g:fsharp_only_check_errors_on_write=1
+
+" php.vim
+function! PhpSyntaxOverride()
+  hi! def link phpDocTags  phpDefine
+  hi! def link phpDocParam phpType
+endfunction
+
+augroup phpSyntaxOverride
+  autocmd!
+  autocmd FileType php call PhpSyntaxOverride()
+augroup END
+
 
