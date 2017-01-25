@@ -50,10 +50,13 @@ Use oivim to start OpenIDE running vim in a terminal.
 | {                                         | Navigate up to next empty line                  |
 | _                                         | Navigate to first character in line             |
 | g0                                        | Navigate to column 0 of line                    |
+| %                                         | Navigate to matching (/[/{/..                   |
 | [NUM]k                                    | Move [NUM] lines up                             |
 | [NUM]j                                    | Move [NUM] lines down                           |
 | [NUM]h                                    | Move [NUM] columns left                         |
 | [NUM]l                                    | Move [NUM] columns right                        |
+| gg                                        | Move to top                                     |
+| G                                         | Move to bottom                                  |
 | Ctrl+k, Ctrl+b                            | Toggle NERDTree                                 |
 | Ctrl+k, Ctrl+f                            | Open current file in NERDTree                   |
 | Ctrl+w, s                                 | Split buffer horizontally                       |
@@ -75,6 +78,14 @@ Use oivim to start OpenIDE running vim in a terminal.
 | Selection                                 |                                                 |
 | yy                                        | Yank current line                               |
 | yiw                                       | Yank inner word                                 |
+| diw                                       | Delete inner word                               |
+| viw                                       | Select inner word                               |
+| y[MOTION]                                 | Yank using motion - yw (yank word)              |
+| d[MOTION]                                 | Delete using motion - dw (delete word)          |
+| v[MOTION]                                 | Select using motion - vw (select word)          |
+| y[NUM][MOTION]                            | Yank motion repeat - y4w (yank 4 words)         |
+| d[NUM][MOTION]                            | Delete motion repeat - d4w (delete 4 words)     |
+| v[NUM][MOTION]                            | Select motion repeat - v4w (select 4 words)     |
 | vap                                       | Select between empty lines                      |
 | vaj                                       | Select to last character in line                |
 | vak                                       | Select from first to last position in line      |
@@ -92,6 +103,7 @@ Use oivim to start OpenIDE running vim in a terminal.
 | O                                         | Move to begining of selected text               |
 | "+y                                       | Yank to X-clipboard                             |
 | "+v                                       | Paste from X-clipboard                          |
+| Ctrl+n                                    | Multicursor selection                           |
 |                                           |                                                 |
 | Modification                              |                                                 |
 | dd                                        | Delete line and yank line                       |
@@ -106,5 +118,7 @@ Use oivim to start OpenIDE running vim in a terminal.
 | Ctrl+r                                    | Redo                                            |
 | r[CHAR]                                   | Add replace current character with [CHAR]       |
 | Ctrl+k                                    | Add semicolon to end of line                    |
+| Ctrl+n                                    | Multicursor selection using word under cursor   |
 | F10                                       | Toggle paste mode                               |
-
+|                                           |                                                 |
+| Modification                              |                                                 |
