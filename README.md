@@ -29,3 +29,35 @@ Start tmux either by runnin tmux. Use tmux attach to start tmux and attach to a 
 | Ctrl+A, w                                 | Choose between open windows                     |
 | Ctrl+A, s                                 | Choose between running tmux sessions            |
 | Ctrl+A, d                                 | Detach from a running tmux session              |
+
+## Vim
+Use oivim to start OpenIDE running vim in a terminal.
+
+| Keyboard shortcut                         | Description                                     |
+|:------------------------------------------|:------------------------------------------------|
+| Navigation                                |                                                 |
+| h/j/k/l                                   | Navigate left/down/up/right                     |
+| w                                         | Navigate to begining of next word               |
+| e                                         | Navigate to end of next word                    |
+| b                                         | Navigate to beginning of previous word          |
+| ge                                        | Navigate to end of previous word                |
+| $                                         | Navigate to end of line                         |
+| Ctrl+k                                    | Navigate to end of line and enter inster mode   |
+| Ctrl+d                                    | Navigate half a page down                       |
+| Ctrl+u                                    | Navigate half a page up                         |
+| }                                         | Navigate down to next empty line                |
+| {                                         | Navigate up to next empty line                  |
+| _                                         | Navigate to first character in line             |
+| g0                                        | Navigate to column 0 of line                    |
+| Ctrl+k, Ctrl+b                            | Toggle treevew (NERDTree)                       |
+| Ctrl+w, s                                 | Split buffer horizontally                       |
+| Ctrl+w, v                                 | Split buffer vertically                         |
+| Ctrl+w, h/j/k/l                           | Navigate between buffers in a window            |
+| Ctrl+w, t                                 | Open new tab                                    |
+| Ctrl+w, T                                 | Open current file new tab                       |
+| Ctrl+w, c                                 | Close buffer                                    |
+| Alt, [NUM]                                | Open tab [NUM] (may not work in terminal)       |
+| yy[NUM]                                   | Open tab [NUM]                                  |
+|                                           |                                                 |
+| Selection                                 |                                                 |
+
