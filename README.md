@@ -90,6 +90,8 @@ Use oivim to start OpenIDE running vim in a terminal.
 | ,d                                        | Delete selection without yank                   |
 | o                                         | Move to end of selected text                    |
 | O                                         | Move to begining of selected text               |
+| "+y                                       | Yank to X-clipboard                             |
+| "+v                                       | Paste from X-clipboard                          |
 |                                           |                                                 |
 | Modification                              |                                                 |
 | dd                                        | Delete line and yank line                       |
@@ -104,4 +106,5 @@ Use oivim to start OpenIDE running vim in a terminal.
 | Ctrl+r                                    | Redo                                            |
 | r[CHAR]                                   | Add replace current character with [CHAR]       |
 | Ctrl+k                                    | Add semicolon to end of line                    |
+| F10                                       | Toggle paste mode                               |
 
