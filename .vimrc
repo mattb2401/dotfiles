@@ -463,6 +463,7 @@ map <F5> :!oi x run<cr>
 map <A-o> :let x = system("oi codemodel publish \"complete-snippet\"")<cr>
 map yyo :let x = system("oi codemodel publish \"complete-snippet\"")<cr>
 map <C-h> :let x = system("oi codemodel publish \"." . &ft . " command tamper-at-caret\"")<cr>
+inoremap <C-h> <Esc>:let x = system("oi codemodel publish \"." . &ft . " command tamper-at-caret\"")<cr>
 map <A-g> :let x = system("oi codemodel publish \"." . &ft . " command navigate-at-caret\"")<cr>
 map yyg :let x = system("oi codemodel publish \"." . &ft . " command navigate-at-caret\"")<cr>
 map <A-l> :let x = system("oi codemodel publish \"." . &ft . " command command-at-caret\"")<cr>
@@ -478,25 +479,31 @@ map <A-n> :let x = system("oi codemodel publish \"." . &ft . " command new-from-
 map yyn :let x = system("oi codemodel publish \"." . &ft . " command new-from-caret\"")<cr>
 map <A-e> :let x = system("oi codemodel publish \"." . &ft . " command evaluate-file\"")<cr>
 map 0e :let x = system("oi codemodel publish \"." . &ft . " command evaluate-file\"")<cr>
-map <A-w> :<C-u>call SendSelectionToOpenIDEAsFile("repl")<cr>
-map yyw :<C-u>call SendSelectionToOpenIDEAsFile("repl")<cr>
-map <A-q>w :let x = system("oi codemodel publish \"." .&ft . " command repl 'clearOIRepl'\"")<cr>
-map yyqw :let x = system("oi codemodel publish \"." .&ft . " command repl 'clearOIRepl'\"")<cr>
+map <A-w>e :<C-u>call SendSelectionToOpenIDEAsFile("repl", "")<cr>
+map yywe :<C-u>call SendSelectionToOpenIDEAsFile("repl", "")<cr>
+map <A-w>r :<C-u>call SendSelectionToOpenIDEAsFile("repl","notappend")<cr>
+map yywr :<C-u>call SendSelectionToOpenIDEAsFile("repl","notappend")<cr>
+map <A-w>q :let x = system("oi codemodel publish \"." .&ft . " command repl 'clearOIRepl'\"")<cr>
+map yywq :let x = system("oi codemodel publish \"." .&ft . " command repl 'clearOIRepl'\"")<cr>
 map <A-f> :let x = system("oi codemodel publish \"." .&ft . " command find-interactive\"")<cr>
 map yyf :let x = system("oi codemodel publish \"." .&ft . " command find-interactive\"")<cr>
 map <A-f>a :let x = system("oi codemodel publish \"." .&ft . " command find-interactive-all\"")<cr>
 map yyfa :let x = system("oi codemodel publish \"." .&ft . " command find-interactive-all\"")<cr>
 map <A-f>y :let x = system("oi codemodel publish \"." .&ft . " command find-interactive-yml\"")<cr>
 map yyfy :let x = system("oi codemodel publish \"." .&ft . " command find-interactive-yml\"")<cr>
+map <A-f>yw :let x = system("oi codemodel publish \"." .&ft . " command find-interactive-word\"")<cr>
+map yyfw :let x = system("oi codemodel publish \"." .&ft . " command find-interactive-word\"")<cr>
 "map <C-p> :let x = system("/home/ack/bin/OpenIDE/.OpenIDE/rscripts/tmux-editor-handler-files/file-search-launcher")<cr>
 "imap <C-p> <Esc> :let x = system("/home/ack/bin/OpenIDE/.OpenIDE/rscripts/tmux-editor-handler-files/file-search-launcher")<cr>
 
-function! SendSelectionToOpenIDEAsFile(oiCmd)
+function! SendSelectionToOpenIDEAsFile(oiCmd,prefix)
     let selection = s:get_visual_selection("||newline||")
     let selection = s:strreplace(selection, "\"", "||q||")
     let selection = s:strreplace(selection, "'", "||sq||")
     let selection = s:strreplace(selection, "$", "||dollar||")
-    let x = system("oi codemodel publish \"." .&ft . " command " . a:oiCmd .  " '" . selection . "'\"")
+    let cmdprefix = "||" . a:prefix . "||"
+    let cmdprefix = s:strreplace(cmdprefix, "||||", "")
+    let x = system("oi codemodel publish \"." .&ft . " command " . a:oiCmd .  " '" . cmdprefix . selection . "'\"")
     "system("oi codemodel publish \"." . &ft . " fromvim \"" . selection . "\"")
 endfunction
 

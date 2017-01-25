@@ -21,6 +21,9 @@ $caret    = getCaret();
 $location = getLocation($caret);
 $filepath = str_replace(getcwd()."/", "", $location['file']);
 if (endsWith($location['file'], '.php')) {
+    $hasEvaluateTag = findEvaluateTag($location, $caret);
+    if ($hasEvaluateTag)
+        return;
 	$test = getTestName($location, $caret);
     echo "\n";
 	if ($test !== null) {
@@ -51,6 +54,16 @@ if (endsWith($location['file'], '.php')) {
 			echo $line."\n";
 		}
 	}
+}
+
+function findEvaluateTag($location, $caret) {
+	for ($i = $location['line']; $i > 0; $i--) {
+		$match = strpos($caret[$i], '#!/oi/');
+		if ($match !== FALSE) {
+			return true;
+		}
+	}
+	return false;
 }
 
 function getTestName($location, $caret) {

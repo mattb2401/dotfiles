@@ -25,12 +25,15 @@ while ($line = readline()) {
         break;
     }
     $code = "";
+    $addToEvaluation = strpos($line, "||notappend||") === false;
     $textToEvaluateAsCode = substr($line, strlen($replPattern), strlen($line) - (strlen($replPattern) + 1));
+    $textToEvaluateAsCode = str_replace("||notappend||", "", $textToEvaluateAsCode);
     $textToEvaluateAsCode = str_replace("||q||", "\"", $textToEvaluateAsCode);
     $textToEvaluateAsCode = str_replace("||sq||", "'", $textToEvaluateAsCode);
     $textToEvaluateAsCode = str_replace("||dollar||", "$", $textToEvaluateAsCode);
     if ($textToEvaluateAsCode === 'clearOIRepl') {
         $linesToEvaluate = ["<?php"];
+        echo "color|Green|php repl cleared\n";
     } else {
         $selectionLines = explode("||newline||", $textToEvaluateAsCode); 
         $linesToRun = getNewMergedLines($linesToEvaluate, $selectionLines);
@@ -50,7 +53,9 @@ while ($line = readline()) {
             foreach ($output as $ol) {
                 echo $ol."\n";
             }
-            $linesToEvaluate = getNewMergedLines($linesToEvaluate, $selectionLines);
+            if ($addToEvaluation) {
+                $linesToEvaluate = getNewMergedLines($linesToEvaluate, $selectionLines);
+            }
         } else {
             echo "error|".$code."\n";
             echo "error|".$err."\n";

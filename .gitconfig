@@ -3,3 +3,5 @@
         email = acken@acken.no
 [color]
         ui = auto
+[push]
+	default = simple

@@ -24,10 +24,48 @@ def print_react_patterns():
     write("* 'command' 'find-interactive'")
     write("* 'command' 'find-interactive-all'")
     write("* 'command' 'find-interactive-yml'")
+    write("* 'command' 'find-interactive-word'")
     write("'user-inputted' 'find-interactive-input' '*");
     write("'user-inputted' 'find-interactive-input-all' '*");
     write("'user-inputted' 'find-interactive-input-yml' '*");
     write("'user-selected' 'find-interactive-select' '*")
+
+def get_caret():
+    output = [];
+    sys.stdout.write("request|editor get-caret\n")
+    sys.stdout.flush()
+    while True:
+        line = sys.stdin.readline().strip("\n")
+        if line == "end-of-conversation":
+            break;
+        output.append(line)
+    caret = output[0].split("|")
+    return caret[0], int(caret[1]), int(caret[2]), output[1:]
+
+def getWordStart(line, column, operators):
+    startAt   = column - 1
+    # If we are at the start of the word jump one back
+    if line[startAt] in operators:
+        startAt = startAt - 1
+    for i in range(startAt, 1, -1):
+        if line[i - 1] in operators:
+            return i
+    return -1
+
+def getWordEnd(line, column, operators):
+    for i in range(column, len(line) + 1):
+        if line[i-1] in operators:
+            return i-1
+    return len(line)
+
+def getWord(line, column, lines):
+    operators = ['{', '}', '[', ']', '(', ')', '.', ',', "'", '"', '+', '-', '/', '\\', '>', '<', '*', '^', '=', '!', '&', ':', ';', ' ', "\n", '@']
+    line = lines[line - 1]
+    start = getWordStart(line, column, operators)
+    if start == -1:
+        return ""
+    end = getWordEnd(line, column, operators)
+    return line[start:end]
 
 def performFind(prefix, command, event):
     start = len(prefix)
@@ -54,6 +92,11 @@ def handle_event(event, global_profile, local_profile, args):
         write('command|editor user-input "find-interactive-input-all"')
     elif event.endswith(" 'command' 'find-interactive-yml'"):
         write('command|editor user-input "find-interactive-input-yml"')
+    elif event.endswith(" 'command' 'find-interactive-word'"):
+        filename, line, column, lines = get_caret()
+        event = "'" + getWord(line, column, lines) + "'"
+        if event != "''":
+            performFind("'", 'find', event)
     elif event.startswith(inputPrefix):
         performFind(inputPrefix, 'find', event)
     elif event.startswith(inputPrefixAll):

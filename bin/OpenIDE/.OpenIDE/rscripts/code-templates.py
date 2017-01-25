@@ -24,23 +24,29 @@ def editor_insert(filename, line, column, content):
     print("command|editor insert \""+file.name+"\" \""+filename+"|"+str(line)+"|"+str(column)+"\"")
  
 def handle_event(event, global_profile, local_profile, args):
+    options = {
+        "allFiles": "Http query at caret,Mysql query at caret",
+        ".cs": "Nancy Selfhost,Nancy Module",
+        ".js": "Node Readline,Node Websocket Server,Node block under caret,Websocket client,Change CSS rule in dom",
+        ".py": "Python Run Process,Python Get Caret,Python Editor Insert",
+        ".sh": "Bash CI,xbuild",
+        ".php": "Php public function,Php protected function,Php private function,Php class,Php class with constructor"
+    }
     if event == "'tamper-at-caret' 'code-template-insert'":
-        options = {
-            ".cs": "Nancy Selfhost,Nancy Module",
-            ".js": "Node Readline,Node Websocket Server,Node block under caret,Websocket client,Change CSS rule in dom",
-            ".py": "Python Run Process,Python Get Caret,Python Editor Insert",
-            ".sh": "Bash CI,xbuild"
-        }
         filename, _, _, _ = get_caret()
         extension = os.path.splitext(os.path.basename(filename))[1]
         if extension in options:
-            print("command|editor user-select code-template-insert \""+options[extension]+"\"")
+            all = options['allFiles'] + "," + options[extension]
+            print("command|editor user-select code-template-insert \""+all+"\"")
 
     if event.startswith("'user-selected' 'code-template-insert' '"):
         token = "'user-selected' 'code-template-insert' '"
         selection = event[len(token):-1]
         content = None
-        print("handling " + selection)
+	if selection == "Http query at caret":
+	    content = at_caret_http()
+	if selection == "Mysql query at caret":
+	    content = at_caret_mysql()
         if selection == "Nancy Selfhost":
             content = nancy_selfhost()
         if selection == "Nancy Module":
@@ -65,10 +71,32 @@ def handle_event(event, global_profile, local_profile, args):
             content = bash_ci()
         if selection == "xbuild":
             content = bash_xbuild()
+        if selection == "Php public function":
+            content = php_function('public')
+        if selection == "Php protected function":
+            content = php_function('protected')
+        if selection == "Php private function":
+            content = php_function('private')
+        if selection == "Php class":
+            content = php_class()
+        if selection == "Php class with constructor":
+            content = php_class_with_constructor()
 
         if content != None:
             filename, line, column, caret = get_caret()
             editor_insert(filename, line, column, content)
+
+def at_caret_http():
+    return '''/* #!/oi/query-http/{"Authorization": "Bearer f1973463f8df3a4a78d2a1f595404b405c6ce0c0","Ps-Worker-ApiKey":"123456789","Ps-Worker-Version":"0","Content-Type": "application//json"}
+
+GET http://db.local.gl:9200/demographic/person/_search
+|
+return JSON.parse(body);
+
+*/'''
+
+def at_caret_mysql():
+    return '''/* #!/oi/query-mysql/db.local.gl/root/qwerty1234 */'''
 
 def bash_xbuild():
     return '''BINARYDIR=$1/build_output
@@ -76,6 +104,24 @@ if [ -d $BINARYDIR ]; then
     rm -r $BINARYDIR/
 fi
 xbuild replace.csproj /target:rebuild /property:OutDir=$BINARYDIR/ /p:Configuration=Release;'''
+
+def php_function(visibility):
+    return visibility + ''' function ()
+{
+}'''
+
+def php_class():
+    return '''class 
+{
+}'''
+
+def php_class_with_constructor():
+    return '''class 
+{
+    public function __construct()
+    {
+    }
+}'''
 
 def bash_ci():
     return '''OUTPUT=$(xbuild src/Demo/Demo.csproj)
