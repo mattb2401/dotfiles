@@ -80,11 +80,16 @@ Use oivim to start OpenIDE running vim in a terminal.
 | vak                                       | Select from first to last position in line      |
 | val                                       | Select from first to last character in line     |
 | viw                                       | Select inner word                               |
+| vi[CHAR]                                  | Select inside (/)/[/]/{/}/...                   |
+| va[CHAR]                                  | Select outside (/)/[/]/{/}/...                  |
 |                                           |                                                 |
 | When text is selected                     |                                                 |
+| y                                         | Yank text                                       |
 | c                                         | Delete, yank and enter insert mode              |
 | d                                         | Delete selection and yank                       |
 | ,d                                        | Delete selection without yank                   |
+| o                                         | Move to end of selected text                    |
+| O                                         | Move to begining of selected text               |
 |                                           |                                                 |
 | Modification                              |                                                 |
 | dd                                        | Delete line and yank line                       |
