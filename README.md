@@ -19,6 +19,7 @@ Start tmux either by runnin tmux. Use tmux attach to start tmux and attach to a 
 | Ctrl+A, c                                 | Create new window (tab)                         |
 | Ctrl+A, [0-9]                             | Select window                                   |
 | Ctrl+A, o                                 | Toggle last window                              |
+| Ctrl+A, n                                 | Select next window                              |
 | Ctrl+A, Esc                               | Enter select mode                               |
 | ---> vim keys, navigation keys            | To navigate                                     |
 | ---> v                                    | Start text selection                            |
@@ -59,7 +60,7 @@ Use oivim to start OpenIDE running vim in a terminal.
 | Ctrl+w, v                                 | Split buffer vertically                         |
 | Ctrl+w, h/j/k/l                           | Navigate between buffers in a window            |
 | Ctrl+w, t                                 | Open new tab                                    |
-| Ctrl+w, T                                 | Open current file new tab                       |
+| Ctrl+w, T                                 | Open current file in new tab                    |
 | Ctrl+w, c                                 | Close buffer                                    |
 | Alt, [NUM]                                | Open tab [NUM] (may not work in terminal)       |
 | yy[NUM]                                   | Open tab [NUM]                                  |
@@ -73,21 +74,29 @@ Use oivim to start OpenIDE running vim in a terminal.
 |                                           |                                                 |
 | Selection                                 |                                                 |
 | yy                                        | Yank current line                               |
+| yiw                                       | Yank inner word                                 |
 | vap                                       | Select between empty lines                      |
 | vaj                                       | Select to last character in line                |
 | vak                                       | Select from first to last position in line      |
 | val                                       | Select from first to last character in line     |
+| viw                                       | Select inner word                               |
 |                                           |                                                 |
 | When text is selected                     |                                                 |
+| c                                         | Delete, yank and enter insert mode              |
 | d                                         | Delete selection and yank                       |
 | ,d                                        | Delete selection without yank                   |
 |                                           |                                                 |
 | Modification                              |                                                 |
 | dd                                        | Delete line and yank line                       |
+| diw                                       | Delete line and yank line                       |
+| d{                                        | Delete to previous backspace                    |
+| d                                         | Delete to next backspace                        |
 | d$                                        | Delete to end of line and yank                  |
 | ,dd                                       | Delete line without yank                        |
 | ,d$                                       | Delete to end of line without yank              |
 | p                                         | Past previously ynaked content                  |
+| u                                         | Undo                                            |
+| Ctrl+r                                    | Redo                                            |
 | r[CHAR]                                   | Add replace current character with [CHAR]       |
 | Ctrl+k                                    | Add semicolon to end of line                    |
 
