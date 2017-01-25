@@ -72,8 +72,22 @@ Use oivim to start OpenIDE running vim in a terminal.
 | Ctrl+q                                    | Clear search                                    |
 |                                           |                                                 |
 | Selection                                 |                                                 |
+| yy                                        | Yank current line                               |
 | vap                                       | Select between empty lines                      |
 | vaj                                       | Select to last character in line                |
 | vak                                       | Select from first to last position in line      |
 | val                                       | Select from first to last character in line     |
+|                                           |                                                 |
+| When text is selected                     |                                                 |
+| d                                         | Delete selection and yank                       |
+| ,d                                        | Delete selection without yank                   |
+|                                           |                                                 |
+| Modification                              |                                                 |
+| dd                                        | Delete line and yank line                       |
+| d$                                        | Delete to end of line and yank                  |
+| ,dd                                       | Delete line without yank                        |
+| ,d$                                       | Delete to end of line without yank              |
+| p                                         | Past previously ynaked content                  |
+| r[CHAR]                                   | Add replace current character with [CHAR]       |
+| Ctrl+k                                    | Add semicolon to end of line                    |
 
