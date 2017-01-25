@@ -57,6 +57,7 @@ Use oivim to start OpenIDE running vim in a terminal.
 | [NUM]l                                    | Move [NUM] columns right                        |
 | gg                                        | Move to top                                     |
 | G                                         | Move to bottom                                  |
+| ''                                        | Move to last cursor position                    |
 | Ctrl+k, Ctrl+b                            | Toggle NERDTree                                 |
 | Ctrl+k, Ctrl+f                            | Open current file in NERDTree                   |
 | Ctrl+w, s                                 | Split buffer horizontally                       |
@@ -86,6 +87,7 @@ Use oivim to start OpenIDE running vim in a terminal.
 | y[NUM][MOTION]                            | Yank motion repeat - y4w (yank 4 words)         |
 | d[NUM][MOTION]                            | Delete motion repeat - d4w (delete 4 words)     |
 | v[NUM][MOTION]                            | Select motion repeat - v4w (select 4 words)     |
+| Ctrl+v                                    | Start block select                              |
 | vap                                       | Select between empty lines                      |
 | vaj                                       | Select to last character in line                |
 | vak                                       | Select from first to last position in line      |
@@ -119,6 +121,14 @@ Use oivim to start OpenIDE running vim in a terminal.
 | r[CHAR]                                   | Add replace current character with [CHAR]       |
 | Ctrl+k                                    | Add semicolon to end of line                    |
 | Ctrl+n                                    | Multicursor selection using word under cursor   |
+| Ctrl+f,[NUM]                              | Wrap in {} from line end, indent NUM lines down |
 | F10                                       | Toggle paste mode                               |
 |                                           |                                                 |
-| Modification                              |                                                 |
+| In insert mode                            |                                                 |
+|                                           |                                                 |
+| Multicursor                               |                                                 |
+| Ctrl+n                                    | Multicursor selection using word under cursor   |
+| Ctrl+n                                    | If already in multicursor select next           |
+| Ctrl+x                                    | If already in multicursor skip current          |
+| Ctrl+p                                    | If already in multicursor jump one back         |
+
