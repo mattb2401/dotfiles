@@ -66,6 +66,11 @@ Use oivim to start OpenIDE running vim in a terminal.
 | Ctrl+w, t                                 | Open new tab                                    |
 | Ctrl+w, T                                 | Open current file in new tab                    |
 | Ctrl+w, c                                 | Close buffer                                    |
+| Ctrl+w, e                                 | Close tab                                       |
+| Ctrl+w, u                                 | Next tab                                        |
+| Ctrl+w, /                                 | Zoom in to current buffer                       |
+| Ctrl+w, =                                 | Resize buffers in window                        |
+| Ctrl+w, [ARROW]                           | Resize buffer in direction                      |
 | Alt, [NUM]                                | Open tab [NUM] (may not work in terminal)       |
 | yy[NUM]                                   | Open tab [NUM]                                  |
 | /                                         | Search                                          |
@@ -125,10 +130,35 @@ Use oivim to start OpenIDE running vim in a terminal.
 | F10                                       | Toggle paste mode                               |
 |                                           |                                                 |
 | In insert mode                            |                                                 |
+| jj                                        | Escape                                          |
 |                                           |                                                 |
 | Multicursor                               |                                                 |
 | Ctrl+n                                    | Multicursor selection using word under cursor   |
 | Ctrl+n                                    | If already in multicursor select next           |
 | Ctrl+x                                    | If already in multicursor skip current          |
 | Ctrl+p                                    | If already in multicursor jump one back         |
+|                                           |                                                 |
+| OpenIDE                                   |                                                 |
+| F5                                        | Trigger oi run in terminal view                 |
+| Alt+o / yyo                               | Complete snippet                                |
+| Ctrl+h                                    | Run tamper at caret                             |
+| Alt+g / yyg                               | Run navigate at caret                           |
+| Alt+l / yyl                               | Run command at caret                            |
+| Alt+d / yyd                               | Go to definition                                |
+| Alt+Shift+y                               | Go to definition by file extension              |
+| Alt+r / yyr                               | Run evaluate at caret                           |
+| Alt+e / yye                               | Run evaluate file at caret                      |
+| Alt+n / yyn                               | New at caret                                    |
+| Alt+f / yyf                               | Find interactive                                |
+| Alt+f, a / yyfa                           | Find all interactive                            |
+| Alt+f, w / yyfw                           | Find word at caret                              |
+| Alt+f, y / yyfy                           | Find yml interactive                            |
+| Alt+w, e                                  | Evaluate and append selection in repl           |
+| Alt+w, r                                  | Run selection in repl                           |
+| Alt+w, q                                  | Clear repl                                      |
+|                                           |                                                 |
+| Other                                     |                                                 |
+| Ctrl+s                                    | Save                                            |
+| Ctrl+Shift+s                              | Save all                                        |
+| Ctrl+x, Ctrl+x                            | Exit vim                                        |
 
