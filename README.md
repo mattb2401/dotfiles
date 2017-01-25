@@ -49,7 +49,12 @@ Use oivim to start OpenIDE running vim in a terminal.
 | {                                         | Navigate up to next empty line                  |
 | _                                         | Navigate to first character in line             |
 | g0                                        | Navigate to column 0 of line                    |
-| Ctrl+k, Ctrl+b                            | Toggle treevew (NERDTree)                       |
+| [NUM]k                                    | Move [NUM] lines up                             |
+| [NUM]j                                    | Move [NUM] lines down                           |
+| [NUM]h                                    | Move [NUM] columns left                         |
+| [NUM]l                                    | Move [NUM] columns right                        |
+| Ctrl+k, Ctrl+b                            | Toggle NERDTree                                 |
+| Ctrl+k, Ctrl+f                            | Open current file in NERDTree                   |
 | Ctrl+w, s                                 | Split buffer horizontally                       |
 | Ctrl+w, v                                 | Split buffer vertically                         |
 | Ctrl+w, h/j/k/l                           | Navigate between buffers in a window            |
@@ -58,6 +63,17 @@ Use oivim to start OpenIDE running vim in a terminal.
 | Ctrl+w, c                                 | Close buffer                                    |
 | Alt, [NUM]                                | Open tab [NUM] (may not work in terminal)       |
 | yy[NUM]                                   | Open tab [NUM]                                  |
+| /                                         | Search                                          |
+| Shift+[SPACE]                             | Search                                          |
+| *                                         | Search forward for word under cursor            |
+| #                                         | Search backward for word under cursor           |
+| n                                         | Move to next hit in search                      |
+| Shift+n                                   | Move to previous hit in search                  |
+| Ctrl+q                                    | Clear search                                    |
 |                                           |                                                 |
 | Selection                                 |                                                 |
+| vap                                       | Select between empty lines                      |
+| vaj                                       | Select to last character in line                |
+| vak                                       | Select from first to last position in line      |
+| val                                       | Select from first to last character in line     |
 
