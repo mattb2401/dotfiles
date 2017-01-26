@@ -145,7 +145,9 @@ Use oivim to start OpenIDE running vim in a terminal.
 | Alt+g / yyg                               | Run navigate at caret                           |
 | Alt+l / yyl                               | Run command at caret                            |
 | Alt+d / yyd                               | Go to definition                                |
-| Alt+Shift+y                               | Type search                                     |
+| Ctrl+Shift+y                              | Type search                                     |
+| Ctrl+Shift+j                              | Focus ContinuousTests                           |
+| Alt+Shift+y                               | Go to type by extension                         |
 | Alt+r / yyr                               | Run evaluate at caret                           |
 | Alt+e / yye                               | Run evaluate file at caret                      |
 | Alt+n / yyn                               | New at caret                                    |
