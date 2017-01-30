@@ -54,6 +54,7 @@ highlight NonText ctermbg=none
 nnoremap <C-q> :noh<return><esc>
 set ignorecase
 set smartcase
+set incsearch
 set hlsearch
 
 " delete without yanking
