@@ -74,7 +74,9 @@ Use oivim to start OpenIDE running vim in a terminal.
 | Alt, [NUM]                                | Open tab [NUM] (may not work in terminal)       |
 | yy[NUM]                                   | Open tab [NUM]                                  |
 | /                                         | Search                                          |
-| Shift+[SPACE]                             | Search                                          |
+| [SPACE]                                   | Search                                          |
+| q[SPACE]                                  | Clear search                                    |
+| /[SPACE]                                  | Clear search                                    |
 | *                                         | Search forward for word under cursor            |
 | #                                         | Search backward for word under cursor           |
 | n                                         | Move to next hit in search                      |

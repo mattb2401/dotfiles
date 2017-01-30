@@ -175,7 +175,8 @@ endfunction
 
 " Find mapping
 nmap <space> /
-nmap <S-q><<space> :nohlsearch<CR>
+nmap q<space> :nohlsearch<CR>
+nmap q/ :nohlsearch<CR>
 
 " Make Ctrl+l, insert ; at end of line
 nmap <C-l> :<C-u>call MyAppendToEnd(";")<CR>
