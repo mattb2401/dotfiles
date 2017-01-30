@@ -53,6 +53,7 @@ highlight NonText ctermbg=none
 " Search and map handling
 nnoremap <C-q> :noh<return><esc>
 set ignorecase
+set smartcase
 set hlsearch
 
 " delete without yanking
@@ -174,13 +175,14 @@ endfunction
 
 " Find mapping
 nmap <space> /
+nmap <S-q><<space> :nohlsearch<CR>
 
 " Make Ctrl+l, insert ; at end of line
 nmap <C-l> :<C-u>call MyAppendToEnd(";")<CR>
 imap <C-l> <Esc>:<C-u>call MyAppendToEnd(";")<CR>a
 nmap <C-k> $a
 imap <C-k> <Esc>$a
-imap <C-f>0 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>o}
+imap <C-f>0 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>o}<Esc>1ko
 imap <C-f>1 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jg0>>o}
 imap <C-f>2 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv1jg0><Esc>1jo}
 imap <C-f>3 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv2jg0><Esc>2jo}
@@ -241,7 +243,7 @@ imap <C-f>57 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv56jg0><Esc>56jo}
 imap <C-f>58 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv57jg0><Esc>57jo}
 imap <C-f>59 <Esc>:<C-u>call MyAppendToEnd(" {")<CR>jv58jg0><Esc>58jo}
 
-map <C-f>0 :<C-u>call MyAppendToEnd(" {")<CR>o}
+map <C-f>0 :<C-u>call MyAppendToEnd(" {")<CR>o}<Esc>1ko
 map <C-f>1 :<C-u>call MyAppendToEnd(" {")<CR>jg0>>o}
 map <C-f>2 :<C-u>call MyAppendToEnd(" {")<CR>jv1jg0><Esc>1jo}
 map <C-f>3 :<C-u>call MyAppendToEnd(" {")<CR>jv2jg0><Esc>2jo}
