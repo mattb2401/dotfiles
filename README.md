@@ -20,7 +20,7 @@ Start tmux either by runnin tmux. Use tmux attach to start tmux and attach to a 
 | Ctrl+A, [0-9]                             | Select window                                   |
 | Ctrl+A, o                                 | Toggle last window                              |
 | Ctrl+A, n                                 | Select next window                              |
-| Ctrl+A, Esc                               | Enter select mode                               |
+| Ctrl+A, v                                 | Enter select mode                               |
 | ---> vim keys, navigation keys            | To navigate                                     |
 | ---> v                                    | Start text selection                            |
 | ---> y                                    | Yank the text to tmux buffer                    |
