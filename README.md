@@ -10,7 +10,7 @@ Start tmux either by runnin tmux. Use tmux attach to start tmux and attach to a 
 | Ctrl+A, %                                 | Split pane vertically                           |
 | Ctrl+A, r                                 | Split pane horizontally small                   |
 | Ctrl+A, t                                 | Split pane vertically small                     |
-| Ctrl+A, q                                 | Close pane                                      |
+| Ctrl+A, x                                 | Close pane                                      |
 | Ctrl+A, h                                 | Select left pane                                |
 | Ctrl+A, j                                 | Select pane below                               |
 | Ctrl+A, k                                 | Select pane above                               |
