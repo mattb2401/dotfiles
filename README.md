@@ -82,6 +82,7 @@ Use oivim to start OpenIDE running vim in a terminal.
 | n                                         | Move to next hit in search                      |
 | Shift+n                                   | Move to previous hit in search                  |
 | Ctrl+q                                    | Clear search                                    |
+| zz                                        | Resenter page to center of page                 |
 |                                           |                                                 |
 | Selection                                 |                                                 |
 | yy                                        | Yank current line                               |

@@ -50,6 +50,8 @@ end
 hi Normal ctermbg=none
 highlight NonText ctermbg=none
 
+set scrolloff=10
+
 " Search and map handling
 nnoremap <C-q> :noh<return><esc>
 set ignorecase
