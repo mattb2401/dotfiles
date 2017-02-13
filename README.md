@@ -68,7 +68,7 @@ Use oivim to start OpenIDE running vim in a terminal.
 | Ctrl+w, c                                 | Close buffer                                    |
 | Ctrl+w, e                                 | Close tab                                       |
 | Ctrl+w, u                                 | Next tab                                        |
-| Ctrl+w, /                                 | Zoom in to current buffer                       |
+| Ctrl+w, \                                 | Zoom in to current buffer                       |
 | Ctrl+w, =                                 | Resize buffers in window                        |
 | Ctrl+w, [ARROW]                           | Resize buffer in direction                      |
 | Alt, [NUM]                                | Open tab [NUM] (may not work in terminal)       |
@@ -166,4 +166,8 @@ Use oivim to start OpenIDE running vim in a terminal.
 | Ctrl+s                                    | Save                                            |
 | Ctrl+Shift+s                              | Save all                                        |
 | Ctrl+x, Ctrl+x                            | Exit vim                                        |
+| q, [key]                                  | Start recording for key [key]                   |
+| <esc>qq                                   | Stop recording                                  |
+| @[key]                                    | Run recording stored in [key]                   |
+| [NUM]@[key]                               | Run recording stored in [key] NUM times         |
 

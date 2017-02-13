@@ -1,5 +1,6 @@
 
 execute pathogen#infect()
+call plug#begin('~/.vim/plugged')
 
 set encoding=utf-8
 
@@ -55,8 +56,6 @@ set scrolloff=10
 " Search and map handling
 nnoremap <C-q> :noh<return><esc>
 set ignorecase
-set smartcase
-set incsearch
 set hlsearch
 
 " delete without yanking
@@ -678,6 +677,9 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:fsharp_xbuild_path = "/usr/bin/xbuild"
 let g:fsharp_completion_helptext=1
 let g:fsharp_only_check_errors_on_write=1
+
+au FileType php set omnifunc=phpcomplete#CompletePHP
+let g:phpcomplete_parse_docblock_comments = 1
 
 " php.vim
 function! PhpSyntaxOverride()
