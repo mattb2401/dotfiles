@@ -336,108 +336,108 @@ vnoremap <C-r> h:s///g<left><left><left>
 "vnoremap <BS> d
 
 " Indent/Unindent
-nmap <Tab> >>
-nmap <S-Tab> a<C-d><Esc>
-imap <S-Tab> <C-d>
+" nmap <Tab> >>
+" nmap <S-Tab> a<C-d><Esc>
+" imap <S-Tab> <C-d>
 
-vmap <silent> <Tab>        :<C-u>call My_indent("v")<CR>
-vmap <silent> <S-Tab>      :<C-u>call My_unindent("v")<CR>
+" vmap <silent> <Tab>        :<C-u>call My_indent("v")<CR>
+" vmap <silent> <S-Tab>      :<C-u>call My_unindent("v")<CR>
 
-function! My_indent(mode)
-    normal gv
-    normal >
-    normal gv
-endfunction
+"function! My_indent(mode)
+"    normal gv
+"    normal >
+"    normal gv
+"endfunction
  
-function! My_unindent(mode)
-    normal gv
-    normal <
-    normal gv
-endfunction
+"function! My_unindent(mode)
+"    normal gv
+"    normal <
+"    normal gv
+"endfunction
 
-set tabline=%!MyTabLine()  " custom tab pages line
-function! MyTabLine()
-        let s = '' " complete tabline goes here
-        " loop through each tab page
-        for t in range(tabpagenr('$'))
-                " set highlight
-                if t + 1 == tabpagenr()
-                        let s .= '%#TabLineSel#'
-                else
-                        let s .= '%#TabLine#'
-                endif
-                " set the tab page number (for mouse clicks)
-                let s .= '%' . (t + 1) . 'T'
-                let s .= ' '
-                " set page number string
-                let s .= t + 1 . ' '
-                " get buffer names and statuses
-                let n = ''      "temp string for buffer names while we loop and check buftype
-                let m = 0       " &modified counter
-                let bc = len(tabpagebuflist(t + 1))     "counter to avoid last ' '
-                let tooLong = 0
-                let maxLength = 20
-                " loop through each buffer in a tab
-                for b in tabpagebuflist(t + 1)
-                    if tooLong == 0
-                        if len(n) < maxLength
-                            " buffer types: quickfix gets a [Q], help gets [H]{base fname}
-                            " others get 1dir/2dir/3dir/fname shortened to 1/2/3/fname
-                            if getbufvar( b, "&buftype" ) == 'help'
-                                    let n .= '[H]' . fnamemodify( bufname(b), ':t:s/.txt$//' )
-                            elseif getbufvar( b, "&buftype" ) == 'quickfix'
-                                    let n .= '[Q]'
-                            else
-                                    "let n .= pathshorten(bufname(b))
-                                    "let n .= bufname(b)
-                                    let n .= fnamemodify(bufname(b), ':t')
-                            endif
-                            " check and ++ tab's &modified count
-                            if getbufvar( b, "&modified" )
-                                    let m += 1
-                            endif
-                            " no final ' ' added...formatting looks better done later
-                            if bc > 1
-                                if len(n) < maxLength
-                                    let n .= ', '
-                                endif
-                            endif
-                            let bc -= 1
-                        else
-                            let n .= ".."
-                            let tooLong = 1
-                        endif
-                    endif
-                endfor
-                " add modified label [n+] where n pages in tab are modified
-                if m > 0
-                        let s .= '[' . m . '+]'
-                endif
-                " select the highlighting for the buffer names
-                " my default highlighting only underlines the active tab
-                " buffer names.
-                if t + 1 == tabpagenr()
-                        let s .= '%#TabLineSel#'
-                else
-                        let s .= '%#TabLine#'
-                endif
-                " add buffer names
-                if n == ''
-                        let s.= '[New]'
-                else
-                        let s .= n
-                endif
-                " switch to no underlining and add final space to buffer list
-                let s .= ' '
-        endfor
-        " after the last tab fill with TabLineFill and reset tab page nr
-        let s .= '%#TabLineFill#%T'
-        " right-align the label to close the current tab page
-        if tabpagenr('$') > 1
-                let s .= '%=%#TabLineFill#%999Xclose'
-        endif
-        return s
-endfunction
+"set tabline=%!MyTabLine()  " custom tab pages line
+"function! MyTabLine()
+"        let s = '' " complete tabline goes here
+"        " loop through each tab page
+"        for t in range(tabpagenr('$'))
+"                " set highlight
+"                if t + 1 == tabpagenr()
+"                        let s .= '%#TabLineSel#'
+"                else
+"                        let s .= '%#TabLine#'
+"                endif
+"                " set the tab page number (for mouse clicks)
+"                let s .= '%' . (t + 1) . 'T'
+"                let s .= ' '
+"                " set page number string
+"                let s .= t + 1 . ' '
+"                " get buffer names and statuses
+"                let n = ''      "temp string for buffer names while we loop and check buftype
+"                let m = 0       " &modified counter
+"                let bc = len(tabpagebuflist(t + 1))     "counter to avoid last ' '
+"                let tooLong = 0
+"                let maxLength = 20
+"                " loop through each buffer in a tab
+"                for b in tabpagebuflist(t + 1)
+"                    if tooLong == 0
+"                        if len(n) < maxLength
+"                            " buffer types: quickfix gets a [Q], help gets [H]{base fname}
+"                            " others get 1dir/2dir/3dir/fname shortened to 1/2/3/fname
+"                            if getbufvar( b, "&buftype" ) == 'help'
+"                                    let n .= '[H]' . fnamemodify( bufname(b), ':t:s/.txt$//' )
+"                            elseif getbufvar( b, "&buftype" ) == 'quickfix'
+"                                    let n .= '[Q]'
+"                            else
+"                                    "let n .= pathshorten(bufname(b))
+"                                    "let n .= bufname(b)
+"                                    let n .= fnamemodify(bufname(b), ':t')
+"                            endif
+"                            " check and ++ tab's &modified count
+"                            if getbufvar( b, "&modified" )
+"                                    let m += 1
+"                            endif
+"                            " no final ' ' added...formatting looks better done later
+"                            if bc > 1
+"                                if len(n) < maxLength
+"                                    let n .= ', '
+"                                endif
+"                            endif
+"                            let bc -= 1
+"                        else
+"                            let n .= ".."
+"                            let tooLong = 1
+"                        endif
+"                    endif
+"                endfor
+"                " add modified label [n+] where n pages in tab are modified
+"                if m > 0
+"                        let s .= '[' . m . '+]'
+"                endif
+"                " select the highlighting for the buffer names
+"                " my default highlighting only underlines the active tab
+"                " buffer names.
+"                if t + 1 == tabpagenr()
+"                        let s .= '%#TabLineSel#'
+"                else
+"                        let s .= '%#TabLine#'
+"                endif
+"                " add buffer names
+"                if n == ''
+"                        let s.= '[New]'
+"                else
+"                        let s .= n
+"                endif
+"                " switch to no underlining and add final space to buffer list
+"                let s .= ' '
+"        endfor
+"        " after the last tab fill with TabLineFill and reset tab page nr
+"        let s .= '%#TabLineFill#%T'
+"        " right-align the label to close the current tab page
+"        if tabpagenr('$') > 1
+"                let s .= '%=%#TabLineFill#%999Xclose'
+"        endif
+"        return s
+"endfunction
 
 " OpenIDE commands
 if has('win32')
@@ -678,7 +678,7 @@ let g:fsharp_xbuild_path = "/usr/bin/xbuild"
 let g:fsharp_completion_helptext=1
 let g:fsharp_only_check_errors_on_write=1
 
-au FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 let g:phpcomplete_parse_docblock_comments = 1
 
 " php.vim

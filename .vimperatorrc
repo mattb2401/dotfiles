@@ -4,3 +4,5 @@
 :noremap h 6h
 :noremap l 6l
 :noremap <s-space> /
+:nunmap <C-k>
+
