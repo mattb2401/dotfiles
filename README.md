@@ -30,6 +30,9 @@ Start tmux either by runnin tmux. Use tmux attach to start tmux and attach to a 
 | Ctrl+A, w                                 | Choose between open windows                     |
 | Ctrl+A, s                                 | Choose between running tmux sessions            |
 | Ctrl+A, d                                 | Detach from a running tmux session              |
+|                                           |                                                 |
+| Commands                                  | Description                                     |
+| setw synchronize-panes on/off             | Write in all panes of a window at once          |
 
 ## Vim
 Use oivim to start OpenIDE running vim in a terminal.

@@ -45,7 +45,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git symfony2)
+plugins=(git symfony2 vi-mode history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,6 +84,9 @@ fi
 
 # make sure we can press ctrl+s in terminal and not end up pausing
 stty -ixon
+
+# Use vim key bindings in terminal
+bindkey -v
 
 zstyle ':completion:*' special-dirs true
 
