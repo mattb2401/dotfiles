@@ -61,6 +61,8 @@ Use oivim to start OpenIDE running vim in a terminal.
 | gg                                        | Move to top                                     |
 | G                                         | Move to bottom                                  |
 | ''                                        | Move to last cursor position                    |
+| Ctrl+o                                    | Move backward in cursor history                 |
+| Ctrl+i                                    | Move forward in cursor history                  |
 | Ctrl+k, Ctrl+b                            | Toggle NERDTree                                 |
 | Ctrl+k, Ctrl+f                            | Open current file in NERDTree                   |
 | Ctrl+w, s                                 | Split buffer horizontally                       |
